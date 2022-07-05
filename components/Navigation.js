@@ -92,9 +92,10 @@ export default function Navigation() {
         />
       </a>
       <img
-        src={"/images/logo-216.png"}
+        src={"/images/logo-369.png"}
         alt={"The Pixel Shop"}
-        className={"uk-position-top-center uk-visible@s uk-padding"}
+        className={"uk-position-top-center"}
+        style={{ marginTop: "63px" }}
       />
     </>
   );
