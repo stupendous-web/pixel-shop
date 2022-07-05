@@ -13,7 +13,7 @@ export default function Contact() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("https://api.thepixelshop.app/", {
+      .post("/api/send", {
         name: name,
         email: email,
         twitter: twitter,
