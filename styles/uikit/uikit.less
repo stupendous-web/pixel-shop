@@ -1,0 +1,124 @@
+@import "https://fonts.googleapis.com/css2?family=Jost&family=Teko:wght@700&display=swap";
+@import "components/_import.less";
+
+@global-font-family:                            'Jost', sans-serif; // lores-12, sans-serif;
+@base-heading-font-family:                      'Teko', sans-serif; // lores-9-wide, sans-serif;
+@base-heading-font-weight:                      bold;
+@global-font-size:                              18px; // 16px;
+// @global-line-height:                            1.5;
+@global-2xlarge-font-size:                      3rem; // h1 2.625rem;
+// @global-xlarge-font-size:                       2rem;
+// @global-large-font-size:                        1.5rem;
+// @global-medium-font-size:                       1.25rem;
+// @global-small-font-size:                        0.875rem;
+
+@morris-leaf:                                   #c5cbab;
+@metropolitan-silhouette:                       #3c4145;
+@herbalist:                                     #989f89;
+@naughty-hottie:                                #b9433c;
+@cherry-blossom:                                #f4c8e1;
+@camping-trip:                                  #657466;
+@silver-fern:                                   #e3dec0;
+@wood:                                          #8b5a4d;
+
+@global-color:                                  #333; // #666;
+@global-emphasis-color:                         #000; // #333;
+// @global-muted-color:                            #999;
+@global-link-color:                             @naughty-hottie; // #1e87f0;
+@global-link-hover-color:                       @global-link-color; // #0f6ecd;
+// @global-inverse-color:                          #fff;
+@global-background:                             @silver-fern; // #fff;
+@global-primary-background:                     @naughty-hottie; // #1e87f0;
+@global-secondary-background:                   @camping-trip; // #222;
+
+@global-margin:                                 1rem;
+@global-small-margin:                           @global-small-font-size;
+@global-medium-margin:                          1.5rem;
+@global-large-margin:                           3rem;
+@global-xlarge-margin:                          9rem;
+@global-gutter:                                 1rem;
+@global-small-gutter:                           @global-small-font-size;
+@global-medium-gutter:                          1.5rem;
+@global-large-gutter:                           3rem;
+
+/********/
+/* HTML */
+/********/
+
+a {
+  color: @global-link-color !important;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/**********/
+/* UI KIT */
+/**********/
+
+// Button
+
+.uk-button {
+  text-transform: uppercase;
+}
+.uk-section-primary:not(.uk-preserve-color) .uk-button-primary {
+  color: @background-primary-background;
+}
+
+/**********/
+/* CUSTOM */
+/**********/
+
+:root {
+  --morris-leaf: @morris-leaf;
+  --metropolitan-silhouette: @metropolitan-silhouette;
+  --herbalist: @herbalist;
+  --naughty-hottie: @naughty-hottie;
+  --cherry-blossom: @cherry-blossom;
+  --camping-trip: @camping-trip;
+  --silver-fern: @silver-fern;
+  --wood: @wood;
+
+  --transition: @animation-fade-duration;
+}
+
+// Day/Night Switch
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: @global-link-color;
+  transition: var(--transition);
+  border-radius: 44px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
