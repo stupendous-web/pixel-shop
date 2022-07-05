@@ -1,7 +1,7 @@
 const { MailtrapClient } = require("mailtrap");
 
 export default function handler(req, res) {
-  const TOKEN = process.env.REACT_APP_TOKEN;
+  const TOKEN = process.env.MAIL_TRAP_TOKEN;
   const ENDPOINT = "https://send.api.mailtrap.io/";
 
   const client = new MailtrapClient({ endpoint: ENDPOINT, token: TOKEN });
