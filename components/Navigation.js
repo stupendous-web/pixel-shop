@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { setHour, setDaytime } from "../redux/actions";
+import { setDaytime } from "../redux/actions";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -13,11 +13,6 @@ export default function Navigation() {
 
   const handleClick = () => {
     dispatch(setDaytime(!daytime));
-    if (daytime) {
-      dispatch(setHour(23));
-    } else {
-      dispatch(setHour(0));
-    }
   };
 
   return (
