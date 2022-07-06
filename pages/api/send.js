@@ -14,10 +14,10 @@ export default async function handler(req, res) {
     });
 
     return transport.sendMail({
-      from: '"Fred Foo 👻" <info@stupendousweb.com>',
+      from: '"Stupendous Web" <info@stupendousweb.com>',
       // to: "sumiez@thepixelshop.app",
       to: "topherjamesknoll@gmail.com",
-      subject: "Hello ✔",
+      subject: "New Lead!",
       text: `Name: ${req.body.name}\r\nEmail: ${req.body.email}\r\nTwitter: ${req.body.twitter}\r\nMessage: ${req.body.message}`,
     });
   }
