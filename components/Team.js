@@ -9,7 +9,9 @@ export default function Team() {
   const [category, setCategory] = useState();
   useEffect(() => {
     axios
-      .get("https://cms.thepixelshop.app/wp-json/wp/v2/posts?_embed&category=6")
+      .get(
+        "https://cms.thepixelshop.app/wp-json/wp/v2/posts?categories=6&_embed"
+      )
       .then((response) => {
         setPosts(response.data);
       });
@@ -34,9 +36,11 @@ export default function Team() {
       >
         <div className={"uk-container"}>
           <div className={daytime ? undefined : "uk-light"}>
-            <h2 style={{ transition: "var(--transition)" }}>{category.name}</h2>
+            <h2 style={{ transition: "var(--transition)" }}>
+              {category?.name}
+            </h2>
             <p style={{ transition: "var(--transition)" }}>
-              {category.description}
+              {category?.description}
             </p>
             <div className={"uk-child-width-1-4@s"} uk-grid={""}>
               {posts?.map((post, key) => {
@@ -48,11 +52,13 @@ export default function Team() {
                 return (
                   <div key={key}>
                     <div className={"uk-height-medium uk-cover-container"}>
-                      <img
-                        src={source_url}
-                        alt={post?.title.rendered + " | The Pixel Shop"}
-                        uk-cover={""}
-                      />
+                      {source_url && (
+                        <img
+                          src={source_url}
+                          alt={post?.title.rendered + " | The Pixel Shop"}
+                          uk-cover={""}
+                        />
+                      )}
                     </div>
                     <h3 style={{ transition: "var(--transition)" }}>
                       {post?.title.rendered}
