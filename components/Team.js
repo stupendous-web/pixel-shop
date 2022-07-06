@@ -1,29 +1,24 @@
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 export default function Team() {
   const daytime = useSelector((state) => state.daytime);
-  const profiles = [
-    {
-      image: "https://www.fillmurray.com/350/400",
-      name: "Masumi",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    },
-    {
-      image: "https://www.fillmurray.com/350/400",
-      name: "Topher",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    },
-    {
-      image: "https://www.fillmurray.com/350/400",
-      name: "Millie",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    },
-    {
-      image: "https://www.fillmurray.com/350/400",
-      name: "Millie",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    },
-  ];
+
+  const [posts, setPosts] = useState();
+  const [category, setCategory] = useState();
+  useEffect(() => {
+    axios
+      .get("https://cms.thepixelshop.app/wp-json/wp/v2/posts?_embed&category=6")
+      .then((response) => {
+        setPosts(response.data);
+      });
+    axios
+      .get("https://cms.thepixelshop.app/wp-json/wp/v2/categories/6")
+      .then((response) => {
+        setCategory(response.data);
+      });
+  }, []);
 
   return (
     <>
@@ -39,27 +34,35 @@ export default function Team() {
       >
         <div className={"uk-container"}>
           <div className={daytime ? undefined : "uk-light"}>
-            <h2 style={{ transition: "var(--transition)" }}>Team</h2>
+            <h2 style={{ transition: "var(--transition)" }}>{category.name}</h2>
             <p style={{ transition: "var(--transition)" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              {category.description}
             </p>
             <div className={"uk-child-width-1-4@s"} uk-grid={""}>
-              {profiles.map((profile, key) => {
+              {posts?.map((post, key) => {
+                let source_url = "";
+                if (post?._embedded["wp:featuredmedia"]) {
+                  source_url =
+                    post?._embedded["wp:featuredmedia"][0]?.source_url;
+                }
                 return (
                   <div key={key}>
                     <div className={"uk-height-medium uk-cover-container"}>
                       <img
-                        src={profile.image}
-                        alt={profile.name + " | The Pixel Shop"}
+                        src={source_url}
+                        alt={post?.title.rendered + " | The Pixel Shop"}
                         uk-cover={""}
                       />
                     </div>
                     <h3 style={{ transition: "var(--transition)" }}>
-                      {profile.name}
+                      {post?.title.rendered}
                     </h3>
-                    <p style={{ transition: "var(--transition)" }}>
-                      {profile.description}
-                    </p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: post?.content.rendered,
+                      }}
+                      style={{ transition: "var(--transition)" }}
+                    />
                   </div>
                 );
               })}

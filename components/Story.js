@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 export default function Story() {
   const daytime = useSelector((state) => state.daytime);
+  const [page, setPage] = useState();
+  useEffect(() => {
+    axios
+      .get("https://cms.thepixelshop.app/wp-json/wp/v2/pages?slug=story")
+      .then((response) => {
+        setPage(response.data[0]);
+      });
+  }, []);
 
   return (
     <>
@@ -17,18 +27,13 @@ export default function Story() {
       >
         <div className={"uk-container"}>
           <div className={daytime ? undefined : "uk-light"}>
-            <h2 style={{ transition: "var(--transition)" }}>Story</h2>
-            <p style={{ transition: "var(--transition)" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusamus accusantium atque, aut blanditiis corporis deserunt
-              dolores eos esse explicabo mollitia nobis omnis pariatur
-              praesentium provident quas qui rerum temporibus veniam!
-            </p>
-            <p style={{ transition: "var(--transition)" }}>
-              Blanditiis consectetur culpa cumque labore quas recusandae
-              temporibus voluptatum. A accusamus aut expedita hic illum iusto,
-              labore maiores minus molestias, quae velit!
-            </p>
+            <h2 style={{ transition: "var(--transition)" }}>
+              {page?.title.rendered}
+            </h2>
+            <div
+              dangerouslySetInnerHTML={{ __html: page?.content.rendered }}
+              style={{ transition: "var(--transition)" }}
+            />
           </div>
         </div>
       </div>
