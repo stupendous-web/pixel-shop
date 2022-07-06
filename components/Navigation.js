@@ -11,8 +11,8 @@ export default function Navigation() {
 
   const links = ["Story", "Collection", "Services", "Team", "FAQ", "Contact"];
 
-  const handleClick = () => {
-    dispatch(setDaytime(!daytime));
+  const handleClick = (time) => {
+    dispatch(setDaytime(time));
   };
 
   return (
@@ -21,25 +21,16 @@ export default function Navigation() {
         className={"uk-position-fixed uk-padding uk-link"}
         style={{ top: 0, right: 0 }}
       >
-        <FontAwesomeIcon icon={faMoon} />
+        <FontAwesomeIcon icon={faMoon} onClick={() => handleClick(false)} />
         <label className={"uk-margin-small-right uk-margin-small-left switch"}>
           <input
             type={"checkbox"}
             checked={daytime}
-            onChange={() => handleClick()}
+            onChange={() => handleClick(!daytime)}
           />
           <span className={"slider"} />
         </label>
-        <FontAwesomeIcon icon={faSun} />
-        <span
-          className={
-            daytime
-              ? "uk-button uk-button-primary"
-              : "uk-button uk-button-primary"
-          }
-          style={{ transition: "var(--transition)" }}
-          onClick={() => handleClick()}
-        ></span>
+        <FontAwesomeIcon icon={faSun} onClick={() => handleClick(true)} />
         <span className={"uk-margin-left"}>
           <a href={"#offcanvas-navigation"} uk-toggle={""}>
             <FontAwesomeIcon icon={faBars} />
