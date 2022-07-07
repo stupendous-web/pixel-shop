@@ -18,15 +18,18 @@ export default function Services() {
       <div
         className={"uk-section"}
         style={{
-          backgroundColor: daytime
-            ? "var(--silver-fern)"
-            : "var(--metropolitan-silhouette)",
+          backgroundColor: "var(--wood)",
           transition: "var(--transition)",
         }}
         id={"Services"}
       >
         <div className={"uk-container"}>
-          <div className={daytime ? undefined : "uk-light"}>
+          <div className={"uk-light"}>
+            <img
+              src={"/images/services.png"}
+              alt={"The Pixel Shop"}
+              className={"uk-width-1-1"}
+            />
             <h2 style={{ transition: "var(--transition)" }}>
               {page?.title.rendered}
             </h2>{" "}
