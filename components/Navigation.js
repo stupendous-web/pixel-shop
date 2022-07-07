@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import UIkit from "uikit";
+import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function Navigation() {
   const daytime = useSelector((state) => state.daytime);
@@ -21,6 +22,20 @@ export default function Navigation() {
         className={"uk-position-fixed uk-padding uk-link"}
         style={{ top: 0, right: 0 }}
       >
+        <a
+          href={"https://twitter.com/realpixelshop"}
+          title={"The Pixel Shop"}
+          className={"uk-margin-small-right"}
+        >
+          <FontAwesomeIcon icon={faTwitter} />
+        </a>
+        <a
+          href={"https://discord.gg/thepixelshop"}
+          title={"The Pixel Shop"}
+          className={"uk-margin-small-right"}
+        >
+          <FontAwesomeIcon icon={faDiscord} />
+        </a>
         <FontAwesomeIcon icon={faMoon} onClick={() => handleClick(false)} />
         <label className={"uk-margin-small-right uk-margin-small-left switch"}>
           <input

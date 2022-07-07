@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
 import moment from "moment";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   const daytime = useSelector((state) => state.daytime);
-  const links = ["Story", "Collection", "Services", "Team", "FAQ", "Contact"];
 
   return (
     <>
@@ -18,37 +19,27 @@ export default function Footer() {
       >
         <div className={"uk-container"}>
           <div className={daytime ? undefined : "uk-light"}>
-            <div className={"uk-child-width-1-2@s uk-flex-middle"} uk-grid={""}>
-              <div>
-                <ul className={"uk-list"}>
-                  {links.map((link, key) => {
-                    return (
-                      <li key={key}>
-                        <a href={"#" + link} title={link} uk-scroll={""}>
-                          {link}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-              <div>
-                <p className={"uk-text-large"}>
-                  <a href={"mailto:sumiez@thepixelshop.app"}>
-                    sumiez@thepixelshop.app
-                  </a>
-                </p>
-                <p
-                  className={"uk-text-small"}
-                  style={{ transition: "var(--transition)" }}
-                >
-                  &copy; Copyright{" "}
-                  <a href={"/"} title={"The Pixel Shop"}>
-                    The Pixel Shop
-                  </a>{" "}
-                  {moment().format("Y")}.
-                </p>
-              </div>
+            <div className={"uk-text-small"}>
+              &copy; Copyright{" "}
+              <a href={"/"} title={"The Pixel Shop"}>
+                The Pixel Shop
+              </a>{" "}
+              {moment().format("Y")}.{" "}
+              <a
+                href={"https://twitter.com/realpixelshop"}
+                title={"The Pixel Shop"}
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>{" "}
+              <a
+                href={"https://discord.gg/thepixelshop"}
+                title={"The Pixel Shop"}
+              >
+                <FontAwesomeIcon icon={faDiscord} />
+              </a>{" "}
+              <a href={"mailto:sumiez@thepixelshop.app"}>
+                sumiez@thepixelshop.app
+              </a>
             </div>
           </div>
         </div>
