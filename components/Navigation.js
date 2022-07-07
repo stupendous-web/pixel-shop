@@ -71,17 +71,16 @@ export default function Navigation() {
       </div>
       <a href={"/"} title={"The Pixel Shop"}>
         <img
-          src={"/images/pillar.png"}
+          src={"/images/pillar-108.png"}
           alt={"The Pixel Shop"}
           className={"uk-position-fixed uk-visible@s uk-padding"}
-          style={{ top: 0, left: 0 }}
+          style={{ width: "6rem", top: 0, left: 0 }}
         />
       </a>
       <img
-        src={"/images/logo-369.png"}
+        src={"/images/logo-288.png"}
         alt={"The Pixel Shop"}
-        className={"uk-position-top-center"}
-        style={{ marginTop: "63px" }}
+        className={"uk-position-top-center logo"}
       />
     </>
   );

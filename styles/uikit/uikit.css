@@ -11686,6 +11686,16 @@ a:hover {
   --wood: #8b5a4d;
   --transition: 0.8s;
 }
+.logo {
+  width: 14rem;
+  margin-top: 63px;
+}
+@media (min-width: 640px) {
+  .logo {
+    width: 16rem;
+    margin-top: 81px;
+  }
+}
 .switch {
   position: relative;
   display: inline-block;
