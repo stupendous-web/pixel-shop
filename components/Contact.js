@@ -2,12 +2,13 @@ import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [twitter, setTwitter] = useState("");
+  const [discord, setDiscord] = useState("");
   const [message, setMessage] = useState("");
   const [response, setResponse] = useState();
   const handleSubmit = (event) => {
@@ -17,12 +18,14 @@ export default function Contact() {
         name: name,
         email: email,
         twitter: twitter,
+        discord: discord,
         message: message,
       })
       .then((response) => {
         setName("");
         setEmail("");
         setTwitter("");
+        setDiscord("");
         setMessage("");
         setResponse(
           <div className={"uk-alert-success"} uk-alert={""}>
@@ -90,6 +93,20 @@ export default function Contact() {
                     value={twitter}
                     onChange={(event) => setTwitter(event.target.value)}
                     placeholder={"Twitter"}
+                  />
+                </div>
+              </div>
+              <div className={"uk-margin"}>
+                <div className={"uk-width-1-1 uk-inline"}>
+                  <div className={"uk-form-icon"}>
+                    <FontAwesomeIcon icon={faDiscord} />
+                  </div>
+                  <input
+                    type={"text"}
+                    className={"uk-input"}
+                    value={discord}
+                    onChange={(event) => setDiscord(event.target.value)}
+                    placeholder={"Discord"}
                   />
                 </div>
               </div>
