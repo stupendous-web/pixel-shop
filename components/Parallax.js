@@ -72,7 +72,7 @@ export default function Parallax() {
             : "var(--camping-trip)",
         }}
       >
-        <div className={"uk-background-cover"} style={{ height: "80vh" }} />
+        <div className={"uk-background-cover parallax-layer"} />
         {images.map((image, key) => {
           return (
             <ParallaxLayer

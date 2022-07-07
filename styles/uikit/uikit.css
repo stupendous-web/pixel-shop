@@ -11687,13 +11687,21 @@ a:hover {
   --transition: 0.8s;
 }
 .logo {
-  width: 14rem;
+  width: 8rem;
   margin-top: 63px;
 }
 @media (min-width: 640px) {
   .logo {
     width: 16rem;
     margin-top: 81px;
+  }
+}
+.parallax-layer {
+  height: 50vh;
+}
+@media (min-width: 640px) {
+  .parallax-layer {
+    height: 80vh;
   }
 }
 .switch {
