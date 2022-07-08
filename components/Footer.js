@@ -12,19 +12,23 @@ export default function Footer() {
         className={"uk-section uk-section-xsmall"}
         style={{
           backgroundColor: daytime
-            ? "var(--silver-fern)"
-            : "var(--metropolitan-silhouette)",
+            ? "var(--daytime-shade-2)"
+            : "var(--nighttime-shade-2)",
           transition: "var(--transition)",
         }}
       >
         <div className={"uk-container"}>
           <div className={daytime ? undefined : "uk-light"}>
             <div className={"uk-text-small"}>
-              &copy; Copyright{" "}
+              <span style={{ transition: "var(--transition)" }}>
+                &copy; Copyright
+              </span>{" "}
               <a href={"/"} title={"The Pixel Shop"}>
                 The Pixel Shop
               </a>{" "}
-              {moment().format("Y")}.{" "}
+              <span style={{ transition: "var(--transition)" }}>
+                {moment().format("Y")}.
+              </span>{" "}
               <a
                 href={"https://twitter.com/realpixelshop"}
                 title={"The Pixel Shop"}

@@ -477,7 +477,7 @@ a.uk-link-heading,
 a.uk-link-heading:hover,
 .uk-link-heading a:hover,
 .uk-link-toggle:hover .uk-link-heading {
-  color: #1e87f0;
+  color: #b9433c;
   text-decoration: none;
 }
 /* Reset
@@ -780,7 +780,7 @@ a.uk-link-reset,
   color: #333 !important;
 }
 .uk-list-primary > ::before {
-  color: #1e87f0 !important;
+  color: #b9433c !important;
 }
 .uk-list-secondary > ::before {
   color: #222 !important;
@@ -1641,13 +1641,13 @@ select.uk-form-width-xsmall {
 .uk-radio:checked,
 .uk-checkbox:checked,
 .uk-checkbox:indeterminate {
-  background-color: #1e87f0;
+  background-color: #b9433c;
 }
 /* Focus */
 .uk-radio:checked:focus,
 .uk-checkbox:checked:focus,
 .uk-checkbox:indeterminate:focus {
-  background-color: #0e6dcd;
+  background-color: #923530;
 }
 /*
  * Icons
@@ -1917,18 +1917,18 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-button-primary {
-  background-color: #1e87f0;
+  background-color: #b9433c;
   color: #fff;
 }
 /* Hover */
 .uk-button-primary:hover {
-  background-color: #0f7ae5;
+  background-color: #a63c36;
   color: #fff;
 }
 /* OnClick + Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-  background-color: #0e6dcd;
+  background-color: #923530;
   color: #fff;
 }
 /*
@@ -2091,11 +2091,11 @@ select.uk-form-width-xsmall {
  *    https://bugzilla.mozilla.org/show_bug.cgi?id=662351
  */
 .uk-progress::-webkit-progress-value {
-  background-color: #1e87f0;
+  background-color: #b9433c;
   transition: width 0.6s ease;
 }
 .uk-progress::-moz-progress-bar {
-  background-color: #1e87f0;
+  background-color: #b9433c;
   /* 1 */
   transition: width 0.6s ease;
 }
@@ -2187,7 +2187,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-section-primary {
-  background: #1e87f0;
+  background: #b9433c;
 }
 /*
  * Secondary
@@ -2445,7 +2445,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-tile-primary {
-  background-color: #1e87f0;
+  background-color: #b9433c;
 }
 /*
  * Secondary
@@ -2524,7 +2524,7 @@ select.uk-form-width-xsmall {
   height: 22px;
   padding: 0 10px;
   /* 3 */
-  background: #1e87f0;
+  background: #b9433c;
   color: #fff;
   font-size: 0.875rem;
   /* 4 */
@@ -2564,14 +2564,14 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-card-primary {
-  background-color: #1e87f0;
+  background-color: #b9433c;
   color: #fff;
 }
 .uk-card-primary .uk-card-title {
   color: #fff;
 }
 .uk-card-primary.uk-card-hover:hover {
-  background-color: #0f7ae5;
+  background-color: #a63c36;
 }
 /*
  * Secondary
@@ -2749,8 +2749,8 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-alert-primary {
-  background: #d8eafc;
-  color: #1e87f0;
+  background: #f0d7d5;
+  color: #b9433c;
 }
 /*
  * Success
@@ -2806,7 +2806,7 @@ select.uk-form-width-xsmall {
   border-radius: 500px;
   vertical-align: middle;
   /* 1 */
-  background: #1e87f0;
+  background: #b9433c;
   color: #fff !important;
   font-size: 11px;
   /* 2 */
@@ -2827,7 +2827,7 @@ select.uk-form-width-xsmall {
 .uk-label {
   display: inline-block;
   padding: 0 0.875rem;
-  background: #1e87f0;
+  background: #b9433c;
   line-height: 2;
   font-size: 0.875rem;
   color: #fff;
@@ -4107,7 +4107,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-notification-message-primary {
-  color: #1e87f0;
+  color: #b9433c;
 }
 /*
  * Success
@@ -5319,7 +5319,7 @@ ul.uk-nav-sub {
 }
 /* Active */
 .uk-subnav-pill > .uk-active > a {
-  background-color: #1e87f0;
+  background-color: #b9433c;
   color: #fff;
 }
 /* Disabled
@@ -6860,7 +6860,7 @@ ul.uk-nav-sub {
   color: #333 !important;
 }
 .uk-text-primary {
-  color: #1e87f0 !important;
+  color: #b9433c !important;
 }
 .uk-text-secondary {
   color: #222 !important;
@@ -6890,7 +6890,7 @@ ul.uk-nav-sub {
   /* 3 */
   display: inline-block;
   /* 4 */
-  background-color: #1e87f0;
+  background-color: #b9433c;
 }
 /* Alignment modifiers
  ========================================================================== */
@@ -7189,7 +7189,7 @@ iframe[data-uk-cover] {
   background-color: #f8f8f8;
 }
 .uk-background-primary {
-  background-color: #1e87f0;
+  background-color: #b9433c;
 }
 .uk-background-secondary {
   background-color: #222;
@@ -11691,7 +11691,7 @@ a:hover {
   text-transform: uppercase;
 }
 .uk-section-primary:not(.uk-preserve-color) .uk-button-primary {
-  color: #1e87f0;
+  color: #b9433c;
 }
 /**********/
 /* CUSTOM */
