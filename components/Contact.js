@@ -46,7 +46,7 @@ export default function Contact() {
   return (
     <>
       <div
-        className={"uk-section uk-section-primary uk-flex uk-flex-middle"}
+        className={"uk-section uk-flex uk-flex-middle"}
         id={"Contact"}
         uk-height-viewport={"offset-bottom: true"}
       >

@@ -1,16 +1,36 @@
 @import "https://fonts.googleapis.com/css2?family=Jost&family=Teko:wght@700&display=swap";
 @import "components/_import.less";
 
-@global-font-family:                            'Jost', sans-serif; // lores-12, sans-serif;
-@base-heading-font-family:                      'Teko', sans-serif; // lores-9-wide, sans-serif;
+@global-font-family:                            'Jost', sans-serif;
+@base-heading-font-family:                      'Teko', sans-serif;
 @base-heading-font-weight:                      bold;
-@global-font-size:                              18px; // 16px;
-// @global-line-height:                            1.5;
-@global-2xlarge-font-size:                      3rem; // h1 2.625rem;
+@global-font-size:                              18px;
+@global-line-height:                            2;
+@global-2xlarge-font-size:                      3rem; // h1
 // @global-xlarge-font-size:                       2rem;
 // @global-large-font-size:                        1.5rem;
 // @global-medium-font-size:                       1.25rem;
 // @global-small-font-size:                        0.875rem;
+
+@daytime-shade-1:                               #e3dec0;
+@daytime-shade-2:                               #c6ccac;
+@daytime-shade-3:                               #989f89;
+@daytime-shade-4:                               #657466;
+@daytime-shade-5:                               #3c4145;
+
+@daytime-accent-1:                              #b9433c;
+@daytime-accent-2:                              #f4c8e1;
+
+@nighttime-shade-1:                             #4f9a8e;
+@nighttime-shade-2:                             #39797e;
+@nighttime-shade-3:                             #215156;
+@nighttime-shade-4:                             #1c313e;
+@nighttime-shade-5:                             #10242c;
+
+@nighttime-accent-1:                            #521812;
+@nighttime-accent-2:                            #9be4b1;
+
+@wood:                                          #8b5a4d;
 
 @morris-leaf:                                   #c5cbab;
 @metropolitan-silhouette:                       #3c4145;
@@ -19,17 +39,9 @@
 @cherry-blossom:                                #f4c8e1;
 @camping-trip:                                  #657466;
 @silver-fern:                                   #e3dec0;
-@wood:                                          #8b5a4d;
 
-@global-color:                                  #333; // #666;
-@global-emphasis-color:                         #000; // #333;
-// @global-muted-color:                            #999;
-@global-link-color:                             @naughty-hottie; // #1e87f0;
-@global-link-hover-color:                       @global-link-color; // #0f6ecd;
-// @global-inverse-color:                          #fff;
-@global-background:                             @silver-fern; // #fff;
-@global-primary-background:                     @naughty-hottie; // #1e87f0;
-@global-secondary-background:                   @camping-trip; // #222;
+@global-link-color:                             @daytime-accent-1;
+@global-link-hover-color:                       @daytime-accent-1;
 
 @global-margin:                                 1rem;
 @global-small-margin:                           @global-small-font-size;
@@ -45,6 +57,27 @@
 /* HTML */
 /********/
 
+:root {
+  --daytime-shade-1: @daytime-shade-1;
+  --daytime-shade-2: @daytime-shade-2;
+  --daytime-shade-3: @daytime-shade-3;
+  --daytime-shade-4: @daytime-shade-4;
+  --daytime-shade-5: @daytime-shade-5;
+  --daytime-accent-1: @daytime-accent-1;
+  --daytime-accent-2: @daytime-accent-2;
+  --nighttime-shade-1: @nighttime-shade-1;
+  --nighttime-shade-2: @nighttime-shade-2;
+  --nighttime-shade-3: @nighttime-shade-3;
+  --nighttime-shade-4: @nighttime-shade-4;
+  --nighttime-shade5: @nighttime-shade-5;
+  --nighttime-accent-1: @nighttime-accent-1;
+  --nighttime-accent-2: @nighttime-accent-2;
+  --wood: @wood;
+  --transition: @animation-fade-duration;
+}
+em {
+  color: @global-color;
+}
 a {
   color: @global-link-color !important;
   font-weight: bold;
@@ -69,19 +102,6 @@ a:hover {
 /**********/
 /* CUSTOM */
 /**********/
-
-:root {
-  --morris-leaf: @morris-leaf;
-  --metropolitan-silhouette: @metropolitan-silhouette;
-  --herbalist: @herbalist;
-  --naughty-hottie: @naughty-hottie;
-  --cherry-blossom: @cherry-blossom;
-  --camping-trip: @camping-trip;
-  --silver-fern: @silver-fern;
-  --wood: @wood;
-
-  --transition: @animation-fade-duration;
-}
 
 // Logo
 

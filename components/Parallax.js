@@ -68,8 +68,8 @@ export default function Parallax() {
         className={"uk-width-1-1 uk-inline uk-overflow-hidden"}
         style={{
           backgroundColor: daytime
-            ? "var(--silver-fern)"
-            : "var(--camping-trip)",
+            ? "var(--daytime-shade-2)"
+            : "var(--nighttime-shade-2)",
         }}
       >
         <div className={"uk-background-cover parallax-layer"} />
