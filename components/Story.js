@@ -19,8 +19,8 @@ export default function Story() {
         className={"uk-section"}
         style={{
           backgroundColor: daytime
-            ? "var(--silver-fern)"
-            : "var(--metropolitan-silhouette)",
+            ? "var(--daytime-shade-5)"
+            : "var(--nighttime-shade-5)",
           transition: "var(--transition)",
         }}
         id={"Story"}

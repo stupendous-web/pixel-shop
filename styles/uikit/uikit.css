@@ -11668,14 +11668,14 @@ iframe[data-uk-cover] {
   --nighttime-shade-2: #39797e;
   --nighttime-shade-3: #215156;
   --nighttime-shade-4: #1c313e;
-  --nighttime-shade5: #10242c;
+  --nighttime-shade-5: #10242c;
   --nighttime-accent-1: #521812;
   --nighttime-accent-2: #9be4b1;
   --wood: #8b5a4d;
   --transition: 0.8s;
 }
 em {
-  color: #666;
+  color: inherit !important;
 }
 a {
   color: #b9433c !important;

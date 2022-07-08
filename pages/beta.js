@@ -21,14 +21,14 @@ export default function Beta() {
       <Story />
       <Divider
         divider={0}
-        daytimeBackgroundColor={"var(--silver-fern)"}
-        nighttimeBackgroundColor={"var(--metropolitan-silhouette)"}
+        daytimeBackgroundColor={"var(--daytime-shade-5)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
       />
       <Services />
       <Divider
         divider={2}
-        daytimeBackgroundColor={"var(--silver-fern)"}
-        nighttimeBackgroundColor={"var(--metropolitan-silhouette)"}
+        daytimeBackgroundColor={"var(--wood)"}
+        nighttimeBackgroundColor={"var(--wood)"}
       />
       <Collection />
       <Divider

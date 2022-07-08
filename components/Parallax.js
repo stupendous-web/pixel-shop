@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ParallaxLayer from "./ParallaxLayer";
+import Divider from "./Divider";
 
 const images = [
   [
@@ -83,6 +84,13 @@ export default function Parallax() {
             />
           );
         })}
+        <div className={"uk-position-bottom"}>
+          <Divider
+            divider={1}
+            daytimeBackgroundColor={"transparent"}
+            nighttimeBackgroundColor={"transparent"}
+          />
+        </div>
       </div>
     </>
   );
