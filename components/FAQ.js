@@ -9,8 +9,8 @@ export default function FAQ() {
         className={"uk-section"}
         style={{
           backgroundColor: daytime
-            ? "var(--morris-leaf)"
-            : "var(--camping-trip)",
+            ? "var(--daytime-shade-5)"
+            : "var(--nighttime-shade-5)",
           transition: "var(--transition)",
         }}
         id={"FAQ"}

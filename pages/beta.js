@@ -20,33 +20,33 @@ export default function Beta() {
       <Parallax />
       <Story />
       <Divider
-        divider={0}
+        divider={3}
         daytimeBackgroundColor={"var(--daytime-shade-5)"}
         nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
       />
       <Services />
       <Divider
-        divider={2}
+        divider={1}
         daytimeBackgroundColor={"var(--wood)"}
         nighttimeBackgroundColor={"var(--wood)"}
       />
       <Collection />
       <Divider
-        divider={1}
-        daytimeBackgroundColor={"var(--morris-leaf)"}
-        nighttimeBackgroundColor={"var(--camping-trip)"}
+        divider={2}
+        daytimeBackgroundColor={"var(--daytime-shade-5)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
       />
       <Team />
       <Divider
         divider={3}
-        daytimeBackgroundColor={"var(--silver-fern)"}
-        nighttimeBackgroundColor={"var(--metropolitan-silhouette)"}
+        daytimeBackgroundColor={"var(--daytime-shade-5)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
       />
       <FAQ />
       <Divider
         divider={4}
-        daytimeBackgroundColor={"var(--morris-leaf)"}
-        nighttimeBackgroundColor={"var(--camping-trip)"}
+        daytimeBackgroundColor={"var(--daytime-shade-5)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
       />
       <Contact />
       <Footer />
