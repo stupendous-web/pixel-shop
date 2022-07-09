@@ -106,7 +106,7 @@ export default function Navigation() {
         />
       </a>
       <img
-        src={"/images/logo-288.png"}
+        src={daytime ? "/images/logo.svg" : "/images/logo-inverse.svg"}
         alt={"The Pixel Shop"}
         className={"uk-position-top-center logo"}
       />
