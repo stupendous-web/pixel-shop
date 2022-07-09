@@ -57,7 +57,6 @@ export default function Parallax() {
       setClientY(event.clientY);
     };
     window.addEventListener("mousemove", (event) => changePerspective(event));
-    console.log(daytime);
     return () =>
       window.removeEventListener("mousemove", (event) =>
         changePerspective(event)
