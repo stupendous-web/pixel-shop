@@ -1,25 +1,16 @@
-import { createStore } from "redux";
-import { createWrapper, HYDRATE } from "next-redux-wrapper";
-import moment from "moment";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+import { createWrapper } from "next-redux-wrapper";
+import reducers from "./reducers";
 
-console.log(moment().hour());
+const middleware = [thunk];
 
-const reducer = (
-  state = { daytime: moment().hour() < 16 ? true : false },
-  action
-) => {
-  switch (action.type) {
-    case HYDRATE:
-      return { ...state, ...action.payload };
-    case "SET_DAYTIME":
-      return { ...state, daytime: action.payload };
-    default:
-      return state;
-  }
-};
+export const store = createStore(
+  reducers,
+  composeWithDevTools(applyMiddleware(...middleware))
+);
 
-// create a makeStore function
-const makeStore = (context) => createStore(reducer);
+const makeStore = () => store;
 
-// export an assembled wrapper
-export const wrapper = createWrapper(makeStore, { debug: true });
+export const wrapper = createWrapper(makeStore);
