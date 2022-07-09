@@ -40,6 +40,7 @@ const images = [
 
 export default function Parallax() {
   const daytime = useSelector((state) => state.daytime);
+  console.log(daytime);
   let width;
   let height;
   if (typeof window !== "undefined") {

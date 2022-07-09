@@ -12,10 +12,6 @@ export default function Navigation() {
 
   const links = ["Story", "Collection", "Services", "Team", "FAQ", "Contact"];
 
-  const handleClick = (time) => {
-    dispatch(setDaytime(time));
-  };
-
   return (
     <>
       <ul
@@ -58,7 +54,7 @@ export default function Navigation() {
           <input
             type={"checkbox"}
             checked={daytime}
-            onChange={() => handleClick(!daytime)}
+            onChange={() => dispatch(setDaytime(!daytime))}
           />
           <span className={"slider"} />
         </label>
