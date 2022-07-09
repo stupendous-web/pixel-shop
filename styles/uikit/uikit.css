@@ -5259,11 +5259,11 @@ ul.uk-nav-sub {
   /* 2 */
   column-gap: 0.25em;
   /* 3 */
-  color: #999;
+  color: #b9433c;
 }
 /* Hover */
 .uk-subnav > * > a:hover {
-  color: #666;
+  color: #b9433c;
   text-decoration: none;
 }
 /* Active */
@@ -5305,7 +5305,7 @@ ul.uk-nav-sub {
 .uk-subnav-pill > * > :first-child {
   padding: 5px 10px;
   background: transparent;
-  color: #999;
+  color: #b9433c;
 }
 /* Hover */
 .uk-subnav-pill > * > a:hover {
