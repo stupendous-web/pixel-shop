@@ -6,6 +6,8 @@ const initialState = {
   daytime: moment().hour() < 16 ? true : false,
 };
 
+console.log(initialState.daytime);
+
 export default function reducers(state = initialState, action) {
   switch (action.type) {
     case "SET_DAYTIME": {
