@@ -19,11 +19,11 @@ export default function FAQ() {
   return (
     <>
       <div
-        className={"uk-section"}
+        className={"uk-section uk-light"}
         style={{
           backgroundColor: daytime
-            ? "var(--daytime-shade-5)"
-            : "var(--nighttime-shade-5)",
+            ? "var(--daytime-shade-2)"
+            : "var(--nighttime-shade-2)",
           transition: "var(--transition)",
         }}
         id={"FAQ"}

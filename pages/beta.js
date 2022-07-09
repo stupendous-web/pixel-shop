@@ -33,20 +33,20 @@ export default function Beta() {
       <Collection />
       <Divider
         divider={2}
-        daytimeBackgroundColor={"var(--daytime-shade-5)"}
-        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
+        daytimeBackgroundColor={"var(--daytime-shade-1)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-1)"}
       />
       <Team />
       <Divider
         divider={3}
-        daytimeBackgroundColor={"var(--daytime-shade-5)"}
-        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
+        daytimeBackgroundColor={"var(--daytime-shade-1)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-1)"}
       />
       <FAQ />
       <Divider
         divider={4}
-        daytimeBackgroundColor={"var(--daytime-shade-5)"}
-        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
+        daytimeBackgroundColor={"var(--daytime-shade-2)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-2)"}
       />
       <Contact />
       <Footer />
