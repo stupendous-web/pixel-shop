@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
     return transport.sendMail({
       from: '"Stupendous Web" <info@stupendousweb.com>',
-      to: "sumiez@thepixelshop.app",
+      to: "contact@thepixelshop.app",
       // to: "topherjamesknoll@gmail.com",
       subject: "New Lead!",
       text: `Name: ${req.body.name}\r\nEmail: ${req.body.email}\r\nTwitter: ${req.body.twitter}\r\nDiscord: ${req.body.discord}\r\nMessage: ${req.body.message}`,

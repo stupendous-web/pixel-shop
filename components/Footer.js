@@ -41,8 +41,8 @@ export default function Footer() {
               >
                 <FontAwesomeIcon icon={faDiscord} />
               </a>{" "}
-              <a href={"mailto:sumiez@thepixelshop.app"}>
-                sumiez@thepixelshop.app
+              <a href={"mailto:contact@thepixelshop.app"}>
+                contact@thepixelshop.app
               </a>
             </div>
           </div>
