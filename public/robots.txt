@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://thepixelshop.app
+
+# Sitemaps
+Sitemap: https://thepixelshop.app/sitemap.xml
