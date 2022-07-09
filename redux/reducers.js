@@ -1,5 +1,7 @@
 import moment from "moment";
 
+console.log(moment().hour());
+
 const initialState = {
   daytime: moment().hour() < 16 ? true : false,
 };
