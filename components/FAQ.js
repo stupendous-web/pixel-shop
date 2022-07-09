@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 export default function FAQ() {
   const daytime = useSelector((state) => state.daytime);
+
+  const [posts, setPosts] = useState();
+  useEffect(() => {
+    axios
+      .get(
+        "https://cms.thepixelshop.app/wp-json/wp/v2/posts?categories=9&_embed"
+      )
+      .then((response) => {
+        setPosts(response.data);
+      });
+  }, []);
 
   return (
     <>
@@ -18,21 +31,31 @@ export default function FAQ() {
         <div className={"uk-container"}>
           <div className={daytime ? undefined : "uk-light"}>
             <h2 style={{ transition: "var(--transition)" }}>FAQ</h2>
-            <ul style={{ transition: "var(--transition)" }}>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-              <li>
-                Accusamus accusantium atque, aut blanditiis corporis deserunt
-                dolores eos esse explicabo mollitia nobis omnis pariatur
-                praesentium provident quas qui rerum temporibus veniam!
-              </li>
-              <li>
-                Blanditiis consectetur culpa cumque labore quas recusandae
-                temporibus voluptatum.
-              </li>
-              <li>
-                A accusamus aut expedita hic illum iusto, labore maiores minus
-                molestias, quae velit!
-              </li>
+            <ul
+              className={"uk-subnav uk-subnav-pill"}
+              uk-switcher={"animation: uk-animation-fade"}
+            >
+              {posts?.map((post, key) => {
+                return (
+                  <li key={key}>
+                    <a href={"#"} className={"uk-light"}>
+                      {post?.title.rendered}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+            <ul className={"uk-switcher"}>
+              {posts?.map((post, key) => {
+                return (
+                  <li
+                    key={key}
+                    dangerouslySetInnerHTML={{
+                      __html: post?.content.rendered,
+                    }}
+                  />
+                );
+              })}
             </ul>
           </div>
         </div>
