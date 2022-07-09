@@ -18,8 +18,25 @@ export default function Navigation() {
 
   return (
     <>
+      <ul
+        className={"uk-subnav uk-position-fixed uk-visible@s"}
+        style={{ top: 0, left: "6rem" }}
+      >
+        {links.map((link, key) => {
+          return (
+            <li key={key}>
+              <a href={"#" + link} uk-scroll={""}>
+                {link}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+
       <div
-        className={"uk-position-fixed uk-padding uk-link"}
+        className={
+          "uk-position-fixed uk-padding uk-link uk-flex uk-flex-middle"
+        }
         style={{ top: 0, right: 0 }}
       >
         <a
@@ -46,7 +63,7 @@ export default function Navigation() {
           <span className={"slider"} />
         </label>
         <FontAwesomeIcon icon={faSun} onClick={() => handleClick(true)} />
-        <span className={"uk-margin-left"}>
+        <span className={"uk-margin-left uk-hidden@s"}>
           <a href={"#offcanvas-navigation"} uk-toggle={""}>
             <FontAwesomeIcon icon={faBars} />
           </a>
@@ -60,8 +77,8 @@ export default function Navigation() {
           className={"uk-offcanvas-bar"}
           style={{
             background: daytime
-              ? "var(--silver-fern)"
-              : "var(--metropolitan-silhouette)",
+              ? "var(--daytime-shade-1)"
+              : "var(--nighttime-shade=-2)",
           }}
         >
           <ul className={"uk-nav uk-nav-default"}>
