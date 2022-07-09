@@ -4,6 +4,7 @@ const nextConfig = {
   siteUrl: "https://thepixelshop.app",
   generateRobotsTxt: true,
   exclude: ["/beta"],
+  excludeDefaultMomentLocales: false,
 };
 
 module.exports = nextConfig;
