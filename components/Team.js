@@ -60,7 +60,10 @@ export default function Team() {
                         />
                       )}
                     </div>
-                    <h3 style={{ transition: "var(--transition)" }}>
+                    <h3
+                      className={"uk-margin-remove-bottom"}
+                      style={{ transition: "var(--transition)" }}
+                    >
                       {post?.title.rendered}
                     </h3>
                     <div
