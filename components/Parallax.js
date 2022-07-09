@@ -73,8 +73,6 @@ export default function Parallax() {
             : "var(--nighttime-shade-2)",
         }}
       >
-        {daytime ? "true" : "false"}
-        {daytime ? "true" : "false"}
         <div className={"uk-background-cover parallax-layer"} />
         {images.map((image, key) => {
           return (

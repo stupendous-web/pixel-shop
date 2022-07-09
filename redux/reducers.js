@@ -1,3 +1,4 @@
+import { HYDRATE } from "next-redux-wrapper";
 import moment from "moment";
 
 const initialState = {
@@ -6,8 +7,9 @@ const initialState = {
 
 export default function reducers(state = initialState, action) {
   switch (action.type) {
+    case HYDRATE:
+      return { ...state, ...action.payload };
     case "SET_DAYTIME": {
-      console.log(action.payload);
       return {
         ...state,
         daytime: action.payload,
