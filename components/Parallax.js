@@ -40,7 +40,6 @@ const images = [
 
 export default function Parallax() {
   const daytime = useSelector((state) => state.daytime);
-  console.log(daytime);
   let width;
   let height;
   if (typeof window !== "undefined") {
@@ -62,6 +61,7 @@ export default function Parallax() {
       window.removeEventListener("mousemove", (event) =>
         changePerspective(event)
       );
+    console.log(daytime);
   }, []);
 
   return (
@@ -74,7 +74,7 @@ export default function Parallax() {
             : "var(--nighttime-shade-2)",
         }}
       >
-        {daytime}
+        {daytime ? "true" : "false"}
         <div className={"uk-background-cover parallax-layer"} />
         {images.map((image, key) => {
           return (
