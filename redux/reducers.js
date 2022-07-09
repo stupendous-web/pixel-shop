@@ -1,7 +1,7 @@
 import moment from "moment";
 
 const initialState = {
-  daytime: moment().hour() < 16 ? true : false,
+  daytime: moment().hour() >= 16,
 };
 
 export default function reducers(state = initialState, action) {
