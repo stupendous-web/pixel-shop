@@ -31,29 +31,20 @@ export default function FAQ() {
         <div className={"uk-container"}>
           <div className={daytime ? undefined : "uk-light"}>
             <h2 style={{ transition: "var(--transition)" }}>FAQ</h2>
-            <ul
-              className={"uk-subnav uk-subnav-pill"}
-              uk-switcher={"animation: uk-animation-fade"}
-            >
+            <ul uk-accordion={""}>
               {posts?.map((post, key) => {
                 return (
                   <li key={key}>
-                    <a href={"#"} className={"uk-light"}>
+                    <a className={"uk-accordion-title"} href={"#"}>
                       {post?.title.rendered}
                     </a>
+                    <div
+                      className={"uk-accordion-content"}
+                      dangerouslySetInnerHTML={{
+                        __html: post?.content.rendered,
+                      }}
+                    ></div>
                   </li>
-                );
-              })}
-            </ul>
-            <ul className={"uk-switcher"}>
-              {posts?.map((post, key) => {
-                return (
-                  <li
-                    key={key}
-                    dangerouslySetInnerHTML={{
-                      __html: post?.content.rendered,
-                    }}
-                  />
                 );
               })}
             </ul>
