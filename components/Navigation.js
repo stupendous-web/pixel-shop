@@ -10,7 +10,7 @@ export default function Navigation() {
   const daytime = useSelector((state) => state.daytime);
   const dispatch = useDispatch();
 
-  const links = ["Story", "Collection", "Services", "Team", "FAQ", "Contact"];
+  const links = ["Story", "Services", "Collection", "Team", "FAQ", "Contact"];
 
   return (
     <>
