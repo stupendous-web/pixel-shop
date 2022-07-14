@@ -102,6 +102,20 @@ a:hover {
 /* CUSTOM */
 /**********/
 
+// Loading
+
+.slide-down {
+  animation: slide-down @animation-duration cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 // Logo
 
 .logo {

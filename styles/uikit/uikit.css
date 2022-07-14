@@ -11695,6 +11695,17 @@ a:hover {
 /**********/
 /* CUSTOM */
 /**********/
+.slide-down {
+  animation: slide-down 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
 .logo {
   width: 8rem;
   margin-top: 63px;

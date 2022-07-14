@@ -9,8 +9,16 @@ import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Divider from "../components/Divider";
+import { useEffect, useState } from "react";
+import Loading from "../components/Loading";
 
 export default function Beta() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
       <Head>
@@ -39,6 +47,7 @@ export default function Beta() {
       <Contact />
       <Footer />
       <Navigation />
+      <Loading loading={loading} />
     </>
   );
 }
