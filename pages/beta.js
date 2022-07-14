@@ -3,7 +3,6 @@ import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Parallax from "../components/Parallax";
 import Story from "../components/Story";
-import Collection from "../components/Collection";
 import Services from "../components/Services";
 import Team from "../components/Team";
 import FAQ from "../components/FAQ";
@@ -19,33 +18,22 @@ export default function Beta() {
       </Head>
       <Parallax />
       <Story />
-      <Divider
-        divider={3}
-        daytimeBackgroundColor={"var(--daytime-shade-5)"}
-        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
-      />
       <Services />
       <Divider
-        divider={1}
+        divider={3}
         daytimeBackgroundColor={"var(--wood)"}
         nighttimeBackgroundColor={"var(--wood)"}
       />
-      <Collection />
-      <Divider
-        divider={2}
-        daytimeBackgroundColor={"var(--daytime-shade-1)"}
-        nighttimeBackgroundColor={"var(--nighttime-shade-1)"}
-      />
       <Team />
       <Divider
-        divider={3}
-        daytimeBackgroundColor={"var(--daytime-shade-1)"}
+        divider={0}
+        daytimeBackgroundColor={"var(--daytime-shade-3)"}
         nighttimeBackgroundColor={"var(--nighttime-shade-1)"}
       />
       <FAQ />
       <Divider
         divider={4}
-        daytimeBackgroundColor={"var(--daytime-shade-2)"}
+        daytimeBackgroundColor={"var(--daytime-shade-5)"}
         nighttimeBackgroundColor={"var(--nighttime-shade-2)"}
       />
       <Contact />

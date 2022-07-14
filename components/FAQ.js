@@ -22,7 +22,7 @@ export default function FAQ() {
         className={"uk-section uk-light"}
         style={{
           backgroundColor: daytime
-            ? "var(--daytime-shade-2)"
+            ? "var(--daytime-shade-5)"
             : "var(--nighttime-shade-2)",
           transition: "var(--transition)",
         }}

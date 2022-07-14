@@ -28,7 +28,7 @@ export default function Team() {
         className={"uk-section"}
         style={{
           backgroundColor: daytime
-            ? "var(--daytime-shade-1)"
+            ? "var(--daytime-shade-3)"
             : "var(--nighttime-shade-1)",
           transition: "var(--transition)",
         }}

@@ -48,7 +48,7 @@ export default function Contact() {
   return (
     <>
       <div
-        className={"uk-section uk-flex uk-flex-middle"}
+        className={"uk-section uk-section-large"}
         style={{
           backgroundColor: daytime
             ? "var(--daytime-shade-1)"
@@ -56,86 +56,83 @@ export default function Contact() {
           transition: "var(--transition)",
         }}
         id={"Contact"}
-        uk-height-viewport={"offset-bottom: true"}
       >
-        <div className={"uk-width-1-1"}>
-          <div className={"uk-container"}>
-            <div className={daytime ? undefined : "uk-light"}>
-              <h2 style={{ transition: "var(--transition)" }}>Say, Hi!</h2>
-              <form onSubmit={(event) => handleSubmit(event)}>
-                <div className={"uk-margin"}>
-                  <div className={"uk-width-1-1 uk-inline"}>
-                    <div className={"uk-form-icon"}>
-                      <FontAwesomeIcon icon={faUser} />
-                    </div>
-                    <input
-                      type={"text"}
-                      className={"uk-input"}
-                      value={name}
-                      onChange={(event) => setName(event.target.value)}
-                      placeholder={"Name"}
-                    />
+        <div className={"uk-container"}>
+          <div className={daytime ? undefined : "uk-light"}>
+            <h2 style={{ transition: "var(--transition)" }}>Say, Hi!</h2>
+            <form onSubmit={(event) => handleSubmit(event)}>
+              <div className={"uk-margin"}>
+                <div className={"uk-width-1-1 uk-inline"}>
+                  <div className={"uk-form-icon"}>
+                    <FontAwesomeIcon icon={faUser} />
                   </div>
-                </div>
-                <div className={"uk-margin"}>
-                  <div className={"uk-width-1-1 uk-inline"}>
-                    <div className={"uk-form-icon"}>
-                      <FontAwesomeIcon icon={faEnvelope} />
-                    </div>
-                    <input
-                      type={"email"}
-                      className={"uk-input"}
-                      value={email}
-                      onChange={(event) => setEmail(event.target.value)}
-                      placeholder={"Email address"}
-                    />
-                  </div>
-                </div>
-                <div className={"uk-margin"}>
-                  <div className={"uk-width-1-1 uk-inline"}>
-                    <div className={"uk-form-icon"}>
-                      <FontAwesomeIcon icon={faTwitter} />
-                    </div>
-                    <input
-                      type={"text"}
-                      className={"uk-input"}
-                      value={twitter}
-                      onChange={(event) => setTwitter(event.target.value)}
-                      placeholder={"Twitter"}
-                    />
-                  </div>
-                </div>
-                <div className={"uk-margin"}>
-                  <div className={"uk-width-1-1 uk-inline"}>
-                    <div className={"uk-form-icon"}>
-                      <FontAwesomeIcon icon={faDiscord} />
-                    </div>
-                    <input
-                      type={"text"}
-                      className={"uk-input"}
-                      value={discord}
-                      onChange={(event) => setDiscord(event.target.value)}
-                      placeholder={"Discord"}
-                    />
-                  </div>
-                </div>
-                <div className={"uk-margin"}>
-                  <textarea
-                    className={"uk-textarea"}
-                    value={message}
-                    onChange={(event) => setMessage(event.target.value)}
-                    placeholder={"Tell us more!"}
+                  <input
+                    type={"text"}
+                    className={"uk-input"}
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
+                    placeholder={"Name"}
                   />
                 </div>
-                {response && <div>{response}</div>}
-                <input
-                  type={"submit"}
-                  value={"Send"}
-                  className={"uk-button uk-button-primary"}
-                  style={{ transition: "var(--transition)" }}
+              </div>
+              <div className={"uk-margin"}>
+                <div className={"uk-width-1-1 uk-inline"}>
+                  <div className={"uk-form-icon"}>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </div>
+                  <input
+                    type={"email"}
+                    className={"uk-input"}
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    placeholder={"Email address"}
+                  />
+                </div>
+              </div>
+              <div className={"uk-margin"}>
+                <div className={"uk-width-1-1 uk-inline"}>
+                  <div className={"uk-form-icon"}>
+                    <FontAwesomeIcon icon={faTwitter} />
+                  </div>
+                  <input
+                    type={"text"}
+                    className={"uk-input"}
+                    value={twitter}
+                    onChange={(event) => setTwitter(event.target.value)}
+                    placeholder={"Twitter"}
+                  />
+                </div>
+              </div>
+              <div className={"uk-margin"}>
+                <div className={"uk-width-1-1 uk-inline"}>
+                  <div className={"uk-form-icon"}>
+                    <FontAwesomeIcon icon={faDiscord} />
+                  </div>
+                  <input
+                    type={"text"}
+                    className={"uk-input"}
+                    value={discord}
+                    onChange={(event) => setDiscord(event.target.value)}
+                    placeholder={"Discord"}
+                  />
+                </div>
+              </div>
+              <div className={"uk-margin"}>
+                <textarea
+                  className={"uk-textarea"}
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
+                  placeholder={"Tell us more!"}
                 />
-              </form>
-            </div>
+              </div>
+              {response && <div>{response}</div>}
+              <input
+                type={"submit"}
+                value={"Send"}
+                className={"uk-button uk-button-primary"}
+                style={{ transition: "var(--transition)" }}
+              />
+            </form>
           </div>
         </div>
       </div>
