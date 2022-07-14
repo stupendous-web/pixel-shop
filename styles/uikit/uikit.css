@@ -5268,7 +5268,7 @@ ul.uk-nav-sub {
 }
 /* Active */
 .uk-subnav > .uk-active > a {
-  color: #333;
+  color: #fff;
 }
 /* Divider modifier
  ========================================================================== */

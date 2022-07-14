@@ -2,9 +2,8 @@ import { useTime } from "../lib/context";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
-import UIkit from "uikit";
 import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
   const { daytime, setDaytime } = useTime();
@@ -12,20 +11,20 @@ export default function Navigation() {
     setDaytime(moment().hour() <= 16);
   }, []);
 
-  const links = ["Story", "Services", "Collection", "Team", "FAQ", "Contact"];
+  const links = ["Story", "Services", "Team", "FAQ", "Contact"];
+  const [active, setActive] = useState();
 
   return (
     <>
       <ul
         className={"uk-subnav uk-position-fixed uk-visible@s"}
         style={{ top: 0, left: "6rem" }}
+        uk-scrollspy-nav={"closest: li; scroll: true"}
       >
         {links.map((link, key) => {
           return (
             <li key={key}>
-              <a href={"#" + link} uk-scroll={""}>
-                {link}
-              </a>
+              <a href={"#" + link}>{link}</a>
             </li>
           );
         })}
