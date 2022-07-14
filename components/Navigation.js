@@ -1,11 +1,16 @@
 import { useTime } from "../lib/context";
+import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import UIkit from "uikit";
 import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from "react";
 
 export default function Navigation() {
   const { daytime, setDaytime } = useTime();
+  useEffect(() => {
+    setDaytime(moment().hour() <= 16);
+  }, []);
 
   const links = ["Story", "Services", "Collection", "Team", "FAQ", "Contact"];
 
