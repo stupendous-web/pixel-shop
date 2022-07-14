@@ -1,11 +1,11 @@
-import { useSelector } from "react-redux";
+import { useTime } from "../lib/context";
 
 export default function Divider({
   divider,
   daytimeBackgroundColor,
   nighttimeBackgroundColor,
 }) {
-  const daytime = useSelector((state) => state.daytime);
+  const { daytime } = useTime();
   const daytimeDividers = [
     "/images/dividers/daytime-divider-1.png",
     "/images/dividers/daytime-divider-2.png",

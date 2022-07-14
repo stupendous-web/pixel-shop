@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux";
+import { useTime } from "../lib/context";
 
 export default function Collection() {
-  const daytime = useSelector((state) => state.daytime);
+  const { daytime } = useTime();
   const profiles = [
     {
       image: "https://www.fillmurray.com/350/400",

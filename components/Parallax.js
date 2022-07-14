@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useTime } from "../lib/context";
 import ParallaxLayer from "./ParallaxLayer";
 import Divider from "./Divider";
 
@@ -39,7 +39,7 @@ const images = [
 ];
 
 export default function Parallax() {
-  const daytime = useSelector((state) => state.daytime);
+  const { daytime } = useTime();
   let width;
   let height;
   if (typeof window !== "undefined") {

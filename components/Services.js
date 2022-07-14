@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import axios from "axios";
 
 export default function Services() {
-  const daytime = useSelector((state) => state.daytime);
   const [page, setPage] = useState();
   useEffect(() => {
     axios

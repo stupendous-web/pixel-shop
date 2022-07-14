@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux";
+import { useTime } from "../lib/context";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
-  const daytime = useSelector((state) => state.daytime);
+  const { daytime } = useTime();
 
   return (
     <>

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useTime } from "../lib/context";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
-  const daytime = useSelector((state) => state.daytime);
+  const { daytime } = useTime();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [twitter, setTwitter] = useState("");

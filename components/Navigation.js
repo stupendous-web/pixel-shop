@@ -1,14 +1,11 @@
-import { useSelector } from "react-redux";
-import { setDaytime } from "../redux/actions";
-import { useDispatch } from "react-redux";
+import { useTime } from "../lib/context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import UIkit from "uikit";
 import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function Navigation() {
-  const daytime = useSelector((state) => state.daytime);
-  const dispatch = useDispatch();
+  const { daytime, setDaytime } = useTime();
 
   const links = ["Story", "Services", "Collection", "Team", "FAQ", "Contact"];
 
@@ -54,7 +51,7 @@ export default function Navigation() {
           <input
             type={"checkbox"}
             checked={daytime}
-            onChange={() => dispatch(setDaytime(!daytime))}
+            onChange={() => setDaytime(!daytime)}
           />
           <span className={"slider"} />
         </label>

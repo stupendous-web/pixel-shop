@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useTime } from "../lib/context";
 import axios from "axios";
 
 export default function FAQ() {
-  const daytime = useSelector((state) => state.daytime);
+  const { daytime } = useTime();
 
   const [posts, setPosts] = useState();
   useEffect(() => {
