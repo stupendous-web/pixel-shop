@@ -22,20 +22,26 @@ export default function Services() {
         id={"Services"}
       >
         <div className={"uk-container"}>
-          <div className={"uk-light"}>
-            <img
-              src={"/images/services.png"}
-              alt={"The Pixel Shop"}
-              className={"uk-width-1-1"}
-            />
-            <h2 style={{ transition: "var(--transition)" }}>
-              {page?.title.rendered}
-            </h2>{" "}
-            <div
-              dangerouslySetInnerHTML={{ __html: page?.content.rendered }}
-              style={{ transition: "var(--transition)" }}
-            />
-          </div>
+          <img
+            src={"/images/services.png"}
+            alt={"The Pixel Shop"}
+            className={"uk-width-1-1"}
+          />
+          <h2
+            style={{
+              color: "var(--daytime-shade-2)",
+              transition: "var(--transition)",
+            }}
+          >
+            {page?.title.rendered}
+          </h2>{" "}
+          <div
+            dangerouslySetInnerHTML={{ __html: page?.content.rendered }}
+            style={{
+              color: "var(--daytime-shade-2)",
+              transition: "var(--transition)",
+            }}
+          />
         </div>
       </div>
     </>

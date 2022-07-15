@@ -27,15 +27,21 @@ export default function Story() {
         id={"Story"}
       >
         <div className={"uk-container"}>
-          <div className={daytime ? undefined : "uk-light"}>
-            <h2 style={{ transition: "var(--transition)" }}>
-              {page?.title.rendered}
-            </h2>
-            <div
-              dangerouslySetInnerHTML={{ __html: page?.content.rendered }}
-              style={{ transition: "var(--transition)" }}
-            />
-          </div>
+          <h2
+            style={{
+              color: daytime ? "var(--daytime-shade-1)" : "white",
+              transition: "var(--transition)",
+            }}
+          >
+            {page?.title.rendered}
+          </h2>
+          <div
+            dangerouslySetInnerHTML={{ __html: page?.content.rendered }}
+            style={{
+              color: daytime ? "var(--daytime-shade-1)" : "white",
+              transition: "var(--transition)",
+            }}
+          />
         </div>
       </div>
     </>

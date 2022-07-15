@@ -35,47 +35,60 @@ export default function Team() {
         id={"Team"}
       >
         <div className={"uk-container"}>
-          <div className={daytime ? undefined : "uk-light"}>
-            <h2 style={{ transition: "var(--transition)" }}>
-              {category?.name}
-            </h2>
-            <p style={{ transition: "var(--transition)" }}>
-              {category?.description}
-            </p>
-            <div className={"uk-child-width-1-4@s"} uk-grid={""}>
-              {posts?.map((post, key) => {
-                let source_url = "";
-                if (post?._embedded["wp:featuredmedia"]) {
-                  source_url =
-                    post?._embedded["wp:featuredmedia"][0]?.source_url;
-                }
-                return (
-                  <div key={key}>
-                    <div className={"uk-height-medium uk-cover-container"}>
-                      {source_url && (
-                        <img
-                          src={source_url}
-                          alt={post?.title.rendered + " | The Pixel Shop"}
-                          uk-cover={""}
-                        />
-                      )}
-                    </div>
-                    <h3
-                      className={"uk-margin-remove-bottom"}
-                      style={{ transition: "var(--transition)" }}
-                    >
-                      {post?.title.rendered}
-                    </h3>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: post?.content.rendered,
-                      }}
-                      style={{ transition: "var(--transition)" }}
-                    />
+          <h2
+            style={{
+              color: daytime ? "var(--daytime-shade-5)" : "white",
+              transition: "var(--transition)",
+            }}
+          >
+            {category?.name}
+          </h2>
+          <p
+            style={{
+              color: daytime ? "var(--daytime-shade-5)" : "white",
+              transition: "var(--transition)",
+            }}
+          >
+            {category?.description}
+          </p>
+          <div className={"uk-child-width-1-4@s"} uk-grid={""}>
+            {posts?.map((post, key) => {
+              let source_url = "";
+              if (post?._embedded["wp:featuredmedia"]) {
+                source_url = post?._embedded["wp:featuredmedia"][0]?.source_url;
+              }
+              return (
+                <div key={key}>
+                  <div className={"uk-height-medium uk-cover-container"}>
+                    {source_url && (
+                      <img
+                        src={source_url}
+                        alt={post?.title.rendered + " | The Pixel Shop"}
+                        uk-cover={""}
+                      />
+                    )}
                   </div>
-                );
-              })}
-            </div>
+                  <h3
+                    className={"uk-margin-remove-bottom"}
+                    style={{
+                      color: daytime ? "var(--daytime-shade-5)" : "white",
+                      transition: "var(--transition)",
+                    }}
+                  >
+                    {post?.title.rendered}
+                  </h3>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: post?.content.rendered,
+                    }}
+                    style={{
+                      color: daytime ? "var(--daytime-shade-5)" : "white",
+                      transition: "var(--transition)",
+                    }}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

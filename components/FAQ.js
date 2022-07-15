@@ -29,26 +29,42 @@ export default function FAQ() {
         id={"FAQ"}
       >
         <div className={"uk-container"}>
-          <div className={daytime ? undefined : "uk-light"}>
-            <h2 style={{ transition: "var(--transition)" }}>FAQ</h2>
-            <ul uk-accordion={""}>
-              {posts?.map((post, key) => {
-                return (
-                  <li key={key}>
-                    <a className={"uk-accordion-title"} href={"#"}>
-                      {post?.title.rendered}
-                    </a>
-                    <div
-                      className={"uk-accordion-content"}
-                      dangerouslySetInnerHTML={{
-                        __html: post?.content.rendered,
-                      }}
-                    ></div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          <h2
+            style={{
+              color: daytime ? "var(--daytime-shade-3)" : "white",
+              transition: "var(--transition)",
+            }}
+          >
+            FAQ
+          </h2>
+          <ul uk-accordion={""}>
+            {posts?.map((post, key) => {
+              return (
+                <li key={key}>
+                  <a
+                    className={"uk-accordion-title"}
+                    href={"#"}
+                    style={{
+                      color: daytime ? "var(--daytime-shade-3)" : "white",
+                      transition: "var(--transition)",
+                    }}
+                  >
+                    {post?.title.rendered}
+                  </a>
+                  <div
+                    className={"uk-accordion-content"}
+                    dangerouslySetInnerHTML={{
+                      __html: post?.content.rendered,
+                    }}
+                    style={{
+                      color: daytime ? "var(--daytime-shade-3)" : "white",
+                      transition: "var(--transition)",
+                    }}
+                  ></div>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </>
