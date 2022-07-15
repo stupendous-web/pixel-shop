@@ -106,7 +106,7 @@ export default function Navigation() {
           style={{
             background: daytime
               ? "var(--daytime-shade-1)"
-              : "var(--nighttime-shade=-2)",
+              : "var(--nighttime-shade-5)",
           }}
         >
           <ul className={"uk-nav uk-nav-default"}>
@@ -120,6 +120,11 @@ export default function Navigation() {
                     onClick={() => {
                       UIkit.offcanvas("#offcanvas-navigation").hide();
                     }}
+                    style={{
+                      color: daytime
+                        ? "var(--daytime-accent-1)"
+                        : "var(--nighttime-accent-2)",
+                    }}
                   >
                     {link}
                   </a>
@@ -132,7 +137,9 @@ export default function Navigation() {
       <a href={"/"} title={"The Pixel Shop"}>
         <img
           src={
-            daytime ? "/images/pillar-108.png" : "/image/pillar-inverse-108.png"
+            daytime
+              ? "/images/pillar-108.png"
+              : "/images/pillar-inverse-108.png"
           }
           alt={"The Pixel Shop"}
           className={"uk-position-fixed uk-visible@m uk-padding"}
