@@ -31,7 +31,12 @@ export default function Navigation() {
               {links.map((link, key) => {
                 return (
                   <li key={key}>
-                    <a href={"#" + link}>{link}</a>
+                    <a
+                      href={"#" + link}
+                      className={daytime ? undefined : "nighttime-link"}
+                    >
+                      {link}
+                    </a>
                   </li>
                 );
               })}
@@ -43,7 +48,7 @@ export default function Navigation() {
                 <a
                   href={"https://twitter.com/realpixelshop"}
                   title={"The Pixel Shop"}
-                  className={"uk-margin-small-right"}
+                  className={daytime ? undefined : "nighttime-link"}
                 >
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
@@ -52,13 +57,16 @@ export default function Navigation() {
                 <a
                   href={"https://discord.gg/thepixelshop"}
                   title={"The Pixel Shop"}
-                  className={"uk-margin-small-right"}
+                  className={daytime ? undefined : "nighttime-link"}
                 >
                   <FontAwesomeIcon icon={faDiscord} />
                 </a>
               </li>
               <div className={"uk-navbar-item"}>
-                <a onClick={() => handleClick(false)}>
+                <a
+                  className={daytime ? undefined : "nighttime-link"}
+                  onClick={() => handleClick(false)}
+                >
                   <FontAwesomeIcon icon={faMoon} />
                 </a>
                 <label
@@ -73,7 +81,10 @@ export default function Navigation() {
                   />
                   <span className={"slider"} />
                 </label>
-                <a onClick={() => handleClick(true)}>
+                <a
+                  className={daytime ? undefined : "nighttime-link"}
+                  onClick={() => handleClick(true)}
+                >
                   <FontAwesomeIcon icon={faSun} />
                 </a>
               </div>
@@ -120,7 +131,9 @@ export default function Navigation() {
       </div>
       <a href={"/"} title={"The Pixel Shop"}>
         <img
-          src={"/images/pillar-108.png"}
+          src={
+            daytime ? "/images/pillar-108.png" : "/image/pillar-inverse-108.png"
+          }
           alt={"The Pixel Shop"}
           className={"uk-position-fixed uk-visible@m uk-padding"}
           style={{ width: "6rem", top: 0, left: 0 }}

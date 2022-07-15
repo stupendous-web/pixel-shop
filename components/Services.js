@@ -14,19 +14,22 @@ export default function Services() {
   return (
     <>
       <div
-        className={"uk-section"}
+        className={"uk-section uk-padding-remove-top"}
         style={{
           backgroundColor: "var(--wood)",
           transition: "var(--transition)",
         }}
         id={"Services"}
       >
-        <div className={"uk-container"}>
+        <div className={"uk-text-center uk-overflow-hidden"}>
           <img
             src={"/images/services.png"}
             alt={"The Pixel Shop"}
-            className={"uk-width-1-1"}
+            className={"uk-margin-bottom"}
+            style={{ height: "472px", minWidth: "20000px" }}
           />
+        </div>
+        <div className={"uk-container"}>
           <h2
             style={{
               color: "var(--daytime-shade-2)",

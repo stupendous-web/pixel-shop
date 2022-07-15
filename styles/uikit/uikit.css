@@ -52,7 +52,7 @@ a,
 a:hover,
 .uk-link:hover,
 .uk-link-toggle:hover .uk-link {
-  color: #f4c8e1;
+  color: #b9433c;
   text-decoration: underline;
 }
 /* Text-level semantics
@@ -4973,15 +4973,15 @@ ul.uk-nav-sub {
  */
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a[aria-expanded="true"] {
-  color: #f4c8e1;
+  color: #b9433c;
 }
 /* OnClick */
 .uk-navbar-nav > li > a:active {
-  color: #f4c8e1;
+  color: #fff;
 }
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
-  color: #fff;
+  color: #fff !important;
 }
 /* Parent icon modifier
  ========================================================================== */
@@ -11686,6 +11686,10 @@ a:hover {
 /**********/
 /* UI KIT */
 /**********/
+.uk-navbar-nav > li > a.nighttime-link,
+.uk-navbar-item > a.nighttime-link {
+  color: #9be4b1;
+}
 .uk-button {
   text-transform: uppercase;
 }
@@ -11720,7 +11724,7 @@ a:hover {
 }
 @media (min-width: 640px) {
   .parallax-layer {
-    height: 90vh;
+    height: 100vh;
   }
 }
 .switch {
