@@ -33,7 +33,7 @@
 @wood:                                          #8b5a4d;
 
 @global-link-color:                             @daytime-accent-1;
-@global-link-hover-color:                       @daytime-accent-1;
+@global-link-hover-color:                       @daytime-accent-2;
 @global-primary-background:                     @daytime-accent-1; // For Buttons
 
 @global-margin:                                 1rem;
@@ -82,12 +82,12 @@ a:hover {
 /* UI KIT */
 /**********/
 
-// Subnav
+// Navbar
 
-@subnav-item-color:                             @global-link-color;
-@subnav-item-hover-color:                       @global-link-hover-color;
-@subnav-item-active-color:                      @global-inverse-color;
-
+@navbar-nav-item-color:                         @global-link-color;
+@navbar-nav-item-hover-color:                   @global-link-hover-color;
+@navbar-nav-item-onclick-color:                 @global-link-hover-color;
+@navbar-nav-item-active-color:                  @global-inverse-color;
 
 // Button
 
@@ -120,23 +120,22 @@ a:hover {
 
 .logo {
   width: 8rem;
-  margin-top: 63px; // Height of navigation content
+  margin-top: 81px; // Height of navigation content
 }
 @media (min-width: @breakpoint-small) {
   .logo {
     width: 16rem;
-    margin-top: 81px; // Height of navigation content
   }
 }
 
-// Hero Height
+// Hero
 
 .parallax-layer {
-  height: 60vh;
+  height: 70vh;
 }
 @media (min-width: @breakpoint-small) {
   .parallax-layer {
-    height: 80vh;
+    height: 90vh;
   }
 }
 

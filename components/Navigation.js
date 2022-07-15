@@ -12,59 +12,79 @@ export default function Navigation() {
   }, []);
 
   const links = ["Story", "Services", "Team", "FAQ", "Contact"];
-  const [active, setActive] = useState();
 
   return (
     <>
-      <ul
-        className={"uk-subnav uk-position-fixed uk-visible@s"}
-        style={{ top: 0, left: "6rem" }}
-        uk-scrollspy-nav={"closest: li; scroll: true"}
-      >
-        {links.map((link, key) => {
-          return (
-            <li key={key}>
-              <a href={"#" + link}>{link}</a>
-            </li>
-          );
-        })}
-      </ul>
-
       <div
-        className={
-          "uk-position-fixed uk-padding uk-link uk-flex uk-flex-middle"
-        }
-        style={{ top: 0, right: 0 }}
+        className={"uk-width-1-1 uk-position-fixed"}
+        style={{ top: 0, left: 0, paddingLeft: "108px" }}
       >
-        <a
-          href={"https://twitter.com/realpixelshop"}
-          title={"The Pixel Shop"}
-          className={"uk-margin-small-right"}
+        <div
+          className={"uk-navbar-container uk-navbar-transparent"}
+          uk-navbar={""}
         >
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-        <a
-          href={"https://discord.gg/thepixelshop"}
-          title={"The Pixel Shop"}
-          className={"uk-margin-small-right"}
-        >
-          <FontAwesomeIcon icon={faDiscord} />
-        </a>
-        <FontAwesomeIcon icon={faMoon} onClick={() => handleClick(false)} />
-        <label className={"uk-margin-small-right uk-margin-small-left switch"}>
-          <input
-            type={"checkbox"}
-            checked={daytime}
-            onChange={() => setDaytime(!daytime)}
-          />
-          <span className={"slider"} />
-        </label>
-        <FontAwesomeIcon icon={faSun} onClick={() => handleClick(true)} />
-        <span className={"uk-margin-left uk-hidden@s"}>
-          <a href={"#offcanvas-navigation"} uk-toggle={""}>
-            <FontAwesomeIcon icon={faBars} />
-          </a>
-        </span>
+          <div className={"uk-navbar-left"}>
+            <ul
+              className={"uk-navbar-nav uk-visible@m"}
+              uk-scrollspy-nav={"closest: li; scroll: true"}
+            >
+              {links.map((link, key) => {
+                return (
+                  <li key={key}>
+                    <a href={"#" + link}>{link}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className={"uk-navbar-right"}>
+            <ul className={"uk-navbar-nav"}>
+              <li>
+                <a
+                  href={"https://twitter.com/realpixelshop"}
+                  title={"The Pixel Shop"}
+                  className={"uk-margin-small-right"}
+                >
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={"https://discord.gg/thepixelshop"}
+                  title={"The Pixel Shop"}
+                  className={"uk-margin-small-right"}
+                >
+                  <FontAwesomeIcon icon={faDiscord} />
+                </a>
+              </li>
+              <div className={"uk-navbar-item"}>
+                <a onClick={() => handleClick(false)}>
+                  <FontAwesomeIcon icon={faMoon} />
+                </a>
+                <label
+                  className={
+                    "uk-margin-small-right uk-margin-small-left switch"
+                  }
+                >
+                  <input
+                    type={"checkbox"}
+                    checked={daytime}
+                    onChange={() => setDaytime(!daytime)}
+                  />
+                  <span className={"slider"} />
+                </label>
+                <a onClick={() => handleClick(true)}>
+                  <FontAwesomeIcon icon={faSun} />
+                </a>
+              </div>
+              <div className={"uk-navbar-item uk-hidden@s"}>
+                <a href={"#offcanvas-navigation"} uk-toggle={""}>
+                  <FontAwesomeIcon icon={faBars} />
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
       </div>
       <div
         id={"offcanvas-navigation"}
@@ -102,7 +122,7 @@ export default function Navigation() {
         <img
           src={"/images/pillar-108.png"}
           alt={"The Pixel Shop"}
-          className={"uk-position-fixed uk-visible@s uk-padding"}
+          className={"uk-position-fixed uk-visible@m uk-padding"}
           style={{ width: "6rem", top: 0, left: 0 }}
         />
       </a>

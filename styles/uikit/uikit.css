@@ -52,7 +52,7 @@ a,
 a:hover,
 .uk-link:hover,
 .uk-link-toggle:hover .uk-link {
-  color: #b9433c;
+  color: #f4c8e1;
   text-decoration: underline;
 }
 /* Text-level semantics
@@ -4965,7 +4965,7 @@ ul.uk-nav-sub {
  */
 .uk-navbar-nav > li > a {
   padding: 0 15px;
-  color: #999;
+  color: #b9433c;
 }
 /*
  * Hover
@@ -4973,15 +4973,15 @@ ul.uk-nav-sub {
  */
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a[aria-expanded="true"] {
-  color: #666;
+  color: #f4c8e1;
 }
 /* OnClick */
 .uk-navbar-nav > li > a:active {
-  color: #333;
+  color: #f4c8e1;
 }
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
-  color: #333;
+  color: #fff;
 }
 /* Parent icon modifier
  ========================================================================== */
@@ -5259,16 +5259,16 @@ ul.uk-nav-sub {
   /* 2 */
   column-gap: 0.25em;
   /* 3 */
-  color: #b9433c;
+  color: #999;
 }
 /* Hover */
 .uk-subnav > * > a:hover {
-  color: #b9433c;
+  color: #666;
   text-decoration: none;
 }
 /* Active */
 .uk-subnav > .uk-active > a {
-  color: #fff;
+  color: #333;
 }
 /* Divider modifier
  ========================================================================== */
@@ -5305,7 +5305,7 @@ ul.uk-nav-sub {
 .uk-subnav-pill > * > :first-child {
   padding: 5px 10px;
   background: transparent;
-  color: #b9433c;
+  color: #999;
 }
 /* Hover */
 .uk-subnav-pill > * > a:hover {
@@ -11708,20 +11708,19 @@ a:hover {
 }
 .logo {
   width: 8rem;
-  margin-top: 63px;
+  margin-top: 81px;
 }
 @media (min-width: 640px) {
   .logo {
     width: 16rem;
-    margin-top: 81px;
   }
 }
 .parallax-layer {
-  height: 60vh;
+  height: 70vh;
 }
 @media (min-width: 640px) {
   .parallax-layer {
-    height: 80vh;
+    height: 90vh;
   }
 }
 .switch {
