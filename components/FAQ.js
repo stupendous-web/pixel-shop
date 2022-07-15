@@ -23,7 +23,7 @@ export default function FAQ() {
         style={{
           backgroundColor: daytime
             ? "var(--daytime-shade-5)"
-            : "var(--nighttime-shade-2)",
+            : "var(--nighttime-shade-5)",
           transition: "var(--transition)",
         }}
         id={"FAQ"}
@@ -31,7 +31,9 @@ export default function FAQ() {
         <div className={"uk-container"}>
           <h2
             style={{
-              color: daytime ? "var(--daytime-shade-3)" : "white",
+              color: daytime
+                ? "var(--daytime-shade-3)"
+                : "var(--nighttime-shade-1)",
               transition: "var(--transition)",
             }}
           >
@@ -45,7 +47,9 @@ export default function FAQ() {
                     className={"uk-accordion-title"}
                     href={"#"}
                     style={{
-                      color: daytime ? "var(--daytime-shade-3)" : "white",
+                      color: daytime
+                        ? "var(--daytime-shade-3)"
+                        : "var(--nighttime-shade-1)",
                       transition: "var(--transition)",
                     }}
                   >
@@ -57,7 +61,9 @@ export default function FAQ() {
                       __html: post?.content.rendered,
                     }}
                     style={{
-                      color: daytime ? "var(--daytime-shade-3)" : "white",
+                      color: daytime
+                        ? "var(--daytime-shade-3)"
+                        : "var(--nighttime-shade-1)",
                       transition: "var(--transition)",
                     }}
                   ></div>

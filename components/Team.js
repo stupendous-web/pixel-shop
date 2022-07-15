@@ -29,7 +29,7 @@ export default function Team() {
         style={{
           backgroundColor: daytime
             ? "var(--daytime-shade-3)"
-            : "var(--nighttime-shade-1)",
+            : "var(--nighttime-shade-3)",
           transition: "var(--transition)",
         }}
         id={"Team"}
@@ -37,7 +37,9 @@ export default function Team() {
         <div className={"uk-container"}>
           <h2
             style={{
-              color: daytime ? "var(--daytime-shade-5)" : "white",
+              color: daytime
+                ? "var(--daytime-shade-5)"
+                : "var(--nighttime-shade-1)",
               transition: "var(--transition)",
             }}
           >
@@ -45,7 +47,9 @@ export default function Team() {
           </h2>
           <p
             style={{
-              color: daytime ? "var(--daytime-shade-5)" : "white",
+              color: daytime
+                ? "var(--daytime-shade-5)"
+                : "var(--nighttime-shade-1)",
               transition: "var(--transition)",
             }}
           >
@@ -71,7 +75,9 @@ export default function Team() {
                   <h3
                     className={"uk-margin-remove-bottom"}
                     style={{
-                      color: daytime ? "var(--daytime-shade-5)" : "white",
+                      color: daytime
+                        ? "var(--daytime-shade-5)"
+                        : "var(--nighttime-shade-1)",
                       transition: "var(--transition)",
                     }}
                   >
@@ -82,7 +88,9 @@ export default function Team() {
                       __html: post?.content.rendered,
                     }}
                     style={{
-                      color: daytime ? "var(--daytime-shade-5)" : "white",
+                      color: daytime
+                        ? "var(--daytime-shade-5)"
+                        : "var(--nighttime-shade-1)",
                       transition: "var(--transition)",
                     }}
                   />

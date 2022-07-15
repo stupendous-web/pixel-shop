@@ -29,7 +29,9 @@ export default function Story() {
         <div className={"uk-container"}>
           <h2
             style={{
-              color: daytime ? "var(--daytime-shade-1)" : "white",
+              color: daytime
+                ? "var(--daytime-shade-1)"
+                : "var(--nighttime-shade-1)",
               transition: "var(--transition)",
             }}
           >
@@ -38,7 +40,9 @@ export default function Story() {
           <div
             dangerouslySetInnerHTML={{ __html: page?.content.rendered }}
             style={{
-              color: daytime ? "var(--daytime-shade-1)" : "white",
+              color: daytime
+                ? "var(--daytime-shade-1)"
+                : "var(--nighttime-shade-1)",
               transition: "var(--transition)",
             }}
           />

@@ -60,13 +60,18 @@ export default function Contact() {
         <div className={"uk-container"}>
           <h2
             style={{
-              color: daytime ? "var(--daytime-shade-5)" : "white",
+              color: daytime
+                ? "var(--daytime-shade-5)"
+                : "var(--nighttime-shade-5)",
               transition: "var(--transition)",
             }}
           >
             Say, Hi!
           </h2>
-          <form onSubmit={(event) => handleSubmit(event)}>
+          <form
+            className={daytime ? undefined : "uk-light"}
+            onSubmit={(event) => handleSubmit(event)}
+          >
             <div className={"uk-margin"}>
               <div className={"uk-width-1-1 uk-inline"}>
                 <div className={"uk-form-icon"}>

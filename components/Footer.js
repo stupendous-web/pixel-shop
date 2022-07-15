@@ -18,33 +18,38 @@ export default function Footer() {
         }}
       >
         <div className={"uk-container"}>
-          <div className={daytime ? undefined : "uk-light"}>
-            <div className={"uk-text-small"}>
-              <span style={{ transition: "var(--transition)" }}>
-                &copy; Copyright
-              </span>{" "}
-              <a href={"/"} title={"The Pixel Shop"}>
-                The Pixel Shop
-              </a>{" "}
-              <span style={{ transition: "var(--transition)" }}>
-                {moment().format("Y")}.
-              </span>{" "}
-              <a
-                href={"https://twitter.com/realpixelshop"}
-                title={"The Pixel Shop"}
-              >
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>{" "}
-              <a
-                href={"https://discord.gg/thepixelshop"}
-                title={"The Pixel Shop"}
-              >
-                <FontAwesomeIcon icon={faDiscord} />
-              </a>{" "}
-              <a href={"mailto:contact@thepixelshop.app"}>
-                contact@thepixelshop.app
-              </a>
-            </div>
+          <div
+            className={"uk-text-small"}
+            style={{
+              color: daytime
+                ? "var(--daytime-shade-1)"
+                : "var(--nighttime-shade-1)",
+            }}
+          >
+            <span style={{ transition: "var(--transition)" }}>
+              &copy; Copyright
+            </span>{" "}
+            <a href={"/"} title={"The Pixel Shop"}>
+              The Pixel Shop
+            </a>{" "}
+            <span style={{ transition: "var(--transition)" }}>
+              {moment().format("Y")}.
+            </span>{" "}
+            <a
+              href={"https://twitter.com/realpixelshop"}
+              title={"The Pixel Shop"}
+            >
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>{" "}
+            <a
+              href={"https://discord.gg/thepixelshop"}
+              title={"The Pixel Shop"}
+            >
+              <FontAwesomeIcon icon={faDiscord} />
+            </a>{" "}
+            <a href={"mailto:contact@thepixelshop.app"}>
+              contact@thepixelshop.app
+            </a>
           </div>
         </div>
       </div>

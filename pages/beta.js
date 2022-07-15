@@ -41,13 +41,13 @@ export default function Beta() {
       <Divider
         divider={0}
         daytimeBackgroundColor={"var(--daytime-shade-3)"}
-        nighttimeBackgroundColor={"var(--nighttime-shade-1)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-3)"}
       />
       <FAQ />
       <Divider
         divider={4}
         daytimeBackgroundColor={"var(--daytime-shade-5)"}
-        nighttimeBackgroundColor={"var(--nighttime-shade-2)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
       />
       <Contact />
       <Footer />
