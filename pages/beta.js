@@ -26,6 +26,11 @@ export default function Beta() {
       </Head>
       <Parallax />
       <Story />
+      <Divider
+        divider={5}
+        daytimeBackgroundColor={"var(--daytime-shade-5)"}
+        nighttimeBackgroundColor={"var(--nighttime-shade-5)"}
+      />
       <Services />
       <Divider
         divider={3}

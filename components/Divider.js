@@ -12,6 +12,7 @@ export default function Divider({
     "/images/dividers/daytime-divider-3.png",
     "/images/dividers/daytime-divider-4.png",
     "/images/dividers/daytime-divider-5.png",
+    "/images/dividers/daytime-divider-6.png",
   ];
   const nighttimeDividers = [
     "/images/dividers/nighttime-divider-1.png",
@@ -19,6 +20,7 @@ export default function Divider({
     "/images/dividers/nighttime-divider-3.png",
     "/images/dividers/nighttime-divider-4.png",
     "/images/dividers/nighttime-divider-5.png",
+    "/images/dividers/nighttime-divider-6.png",
   ];
   const backgroundColor = daytime
     ? daytimeBackgroundColor
