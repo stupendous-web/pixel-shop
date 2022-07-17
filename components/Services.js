@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useTime } from "../lib/context";
 import axios from "axios";
 
 export default function Services() {
+  const { daytime } = useTime();
   const [page, setPage] = useState();
   useEffect(() => {
     axios
@@ -21,12 +23,14 @@ export default function Services() {
         }}
         id={"Services"}
       >
-        <div className={"uk-text-center uk-overflow-hidden"}>
+        <div className={"uk-container"} style={{ maxWidth: "1720px" }}>
           <img
-            src={"/images/services.png"}
+            src={
+              daytime ? "/images/services.png" : "/images/services-inverse.png"
+            }
             alt={"The Pixel Shop"}
             className={"uk-margin-bottom"}
-            style={{ height: "472px", minWidth: "20000px" }}
+            style={{ marginTop: "-3rem" }}
           />
         </div>
         <div className={"uk-container"}>

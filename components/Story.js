@@ -26,7 +26,7 @@ export default function Story() {
         }}
         id={"Story"}
       >
-        <div className={"uk-container"}>
+        <div className={"uk-container uk-margin-large-bottom"}>
           <h2
             style={{
               color: daytime
