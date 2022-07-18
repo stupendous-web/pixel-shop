@@ -15,15 +15,22 @@ export default function Loading({ loading }) {
         }}
       >
         <div
-          className={"uk-flex uk-flex-center uk-flex-middle"}
+          className={"uk-light uk-flex uk-flex-center uk-flex-middle"}
           style={{
             backgroundColor: daytime
-              ? "var(--daytime-shade-2)"
-              : "var(--nighttime-shade-2)",
+              ? "var(--daytime-accent-1)"
+              : "var(--daytime-accent-1)",
           }}
           data-uk-height-viewport={""}
         >
-          <div data-uk-spinner={""} />
+          <div className={"uk-text-center"}>
+            <img
+              src={"/images/loading.gif"}
+              alt={"Loading Pixels"}
+              className={"uk-width-medium"}
+            />
+            <p>Loading</p>
+          </div>
         </div>
       </div>
     </>
