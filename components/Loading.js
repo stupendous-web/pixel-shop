@@ -1,4 +1,7 @@
+import { useTime } from "../lib/context";
+
 export default function Loading({ loading }) {
+  const { daytime } = useTime();
   return (
     <>
       <div
@@ -12,10 +15,15 @@ export default function Loading({ loading }) {
         }}
       >
         <div
-          className={"uk-section-primary uk-flex uk-flex-center uk-flex-middle"}
-          uk-height-viewport={""}
+          className={"uk-flex uk-flex-center uk-flex-middle"}
+          style={{
+            backgroundColor: daytime
+              ? "var(--daytime-shade-2)"
+              : "var(--nighttime-shade-2)",
+          }}
+          data-uk-height-viewport={""}
         >
-          <div uk-spinner={""} />
+          <div data-uk-spinner={""} />
         </div>
       </div>
     </>
