@@ -30,14 +30,14 @@ export default function Contact() {
         setDiscord("");
         setMessage("");
         setResponse(
-          <div className={"uk-alert-success"} uk-alert={""}>
+          <div className={"uk-alert-success"} data-uk-alert={""}>
             <p>{response.data}</p>
           </div>
         );
       })
       .catch((error) => {
         setResponse(
-          <div className={"uk-alert-danger"} uk-alert={""}>
+          <div className={"uk-alert-danger"} data-uk-alert={""}>
             <p>Oops! There was a problem.</p>
           </div>
         );
@@ -52,7 +52,7 @@ export default function Contact() {
         style={{
           backgroundColor: daytime
             ? "var(--daytime-shade-1)"
-            : "var(--nighttime-shade-1)",
+            : "var(--nighttime-shade-2)",
           transition: "var(--transition)",
         }}
         id={"Contact"}

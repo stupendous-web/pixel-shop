@@ -30,7 +30,7 @@ export default function Beta() {
       <Divider
         divider={3}
         daytimeBackgroundColor={"var(--wood)"}
-        nighttimeBackgroundColor={"var(--wood)"}
+        nighttimeBackgroundColor={"var(--wood-2)"}
       />
       <Team />
       <Divider
