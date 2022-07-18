@@ -1,7 +1,4 @@
-import { useTime } from "../lib/context";
-
 export default function Loading({ loading }) {
-  const { daytime } = useTime();
   return (
     <>
       <div
