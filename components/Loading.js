@@ -18,8 +18,8 @@ export default function Loading({ loading }) {
           className={"uk-light uk-flex uk-flex-center uk-flex-middle"}
           style={{
             backgroundColor: daytime
-              ? "var(--daytime-accent-1)"
-              : "var(--daytime-accent-1)",
+              ? "var(--daytime-shade-2)"
+              : "var(--nighttime-shade-2)",
           }}
           data-uk-height-viewport={""}
         >
