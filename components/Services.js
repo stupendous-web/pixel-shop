@@ -18,7 +18,7 @@ export default function Services() {
       <div
         className={"uk-section uk-padding-remove-top"}
         style={{
-          backgroundColor: "var(--wood)",
+          backgroundColor: daytime ? "var(--wood)" : "var(--wood-2)",
           transition: "var(--transition)",
         }}
         id={"Services"}
