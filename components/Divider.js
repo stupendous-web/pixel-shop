@@ -7,19 +7,19 @@ export default function Divider({
 }) {
   const { daytime } = useTime();
   const daytimeDividers = [
-    "/images/dividers/daytime-divider-1.svg",
-    "/images/dividers/daytime-divider-2.svg",
+    "/images/dividers/daytime-divider-1.png",
+    "/images/dividers/daytime-divider-2.png",
     "/images/dividers/daytime-divider-3.png",
-    "/images/dividers/daytime-divider-4.svg",
-    "/images/dividers/daytime-divider-5.svg",
+    "/images/dividers/daytime-divider-4.png",
+    "/images/dividers/daytime-divider-5.png",
     "/images/dividers/daytime-divider-6.png",
   ];
   const nighttimeDividers = [
-    "/images/dividers/nighttime-divider-1.svg",
-    "/images/dividers/nighttime-divider-2.svg",
+    "/images/dividers/nighttime-divider-1.png",
+    "/images/dividers/nighttime-divider-2.png",
     "/images/dividers/nighttime-divider-3.png",
-    "/images/dividers/nighttime-divider-4.svg",
-    "/images/dividers/nighttime-divider-5.svg",
+    "/images/dividers/nighttime-divider-4.png",
+    "/images/dividers/nighttime-divider-5.png",
     "/images/dividers/nighttime-divider-6.png",
   ];
   const backgroundColor = daytime
