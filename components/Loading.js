@@ -15,12 +15,7 @@ export default function Loading({ loading }) {
         }}
       >
         <div
-          className={"uk-light uk-flex uk-flex-center uk-flex-middle"}
-          style={{
-            backgroundColor: daytime
-              ? "var(--daytime-shade-2)"
-              : "var(--nighttime-shade-2)",
-          }}
+          className={"uk-section-primary uk-flex uk-flex-center uk-flex-middle"}
           data-uk-height-viewport={""}
         >
           <div className={"uk-text-center"}>
