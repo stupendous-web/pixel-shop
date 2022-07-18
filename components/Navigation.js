@@ -3,7 +3,7 @@ import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Navigation() {
   const { daytime, setDaytime } = useTime();
@@ -21,12 +21,12 @@ export default function Navigation() {
       >
         <div
           className={"uk-navbar-container uk-navbar-transparent"}
-          uk-navbar={""}
+          data-uk-navbar={""}
         >
           <div className={"uk-navbar-left"}>
             <ul
               className={"uk-navbar-nav uk-visible@m"}
-              uk-scrollspy-nav={"closest: li; scroll: true"}
+              data-uk-scrollspy-nav={"closest: li; scroll: true"}
             >
               {links.map((link, key) => {
                 return (
@@ -89,7 +89,7 @@ export default function Navigation() {
                 </a>
               </div>
               <div className={"uk-navbar-item uk-hidden@s"}>
-                <a href={"#offcanvas-navigation"} uk-toggle={""}>
+                <a href={"#offcanvas-navigation"} data-uk-toggle={""}>
                   <FontAwesomeIcon icon={faBars} />
                 </a>
               </div>
@@ -99,7 +99,7 @@ export default function Navigation() {
       </div>
       <div
         id={"offcanvas-navigation"}
-        uk-offcanvas={"overlay: true; flip: true"}
+        data-uk-offcanvas={"overlay: true; flip: true"}
       >
         <div
           className={"uk-offcanvas-bar"}
@@ -116,7 +116,7 @@ export default function Navigation() {
                   <a
                     href={"#" + link}
                     title={link}
-                    uk-scroll={""}
+                    data-uk-scroll={""}
                     onClick={() => {
                       UIkit.offcanvas("#offcanvas-navigation").hide();
                     }}
@@ -147,7 +147,7 @@ export default function Navigation() {
         />
       </a>
       <img
-        src={daytime ? "/images/logo.svg" : "/images/logo-inverse.svg"}
+        src={daytime ? "/images/logo.svg" : "/images/logo-inverse.png"}
         alt={"The Pixel Shop"}
         className={"uk-position-top-center logo"}
       />
