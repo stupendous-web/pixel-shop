@@ -55,7 +55,10 @@ export default function Team() {
           >
             {category?.description}
           </p>
-          <div className={"uk-child-width-1-4@s"} uk-grid={""}>
+          <div
+            className={"uk-child-width-1-2 uk-child-width-1-5@s"}
+            data-uk-grid={""}
+          >
             {posts?.map((post, key) => {
               let source_url = "";
               if (post?._embedded["wp:featuredmedia"]) {
@@ -63,15 +66,12 @@ export default function Team() {
               }
               return (
                 <div key={key}>
-                  <div className={"uk-height-medium uk-cover-container"}>
-                    {source_url && (
-                      <img
-                        src={source_url}
-                        alt={post?.title.rendered + " | The Pixel Shop"}
-                        uk-cover={""}
-                      />
-                    )}
-                  </div>
+                  {source_url && (
+                    <img
+                      src={source_url}
+                      alt={post?.title.rendered + " | The Pixel Shop"}
+                    />
+                  )}
                   <h3
                     className={"uk-margin-remove-bottom"}
                     style={{
