@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   siteUrl: "https://thepixelshop.app", // For sitemap
   generateRobotsTxt: true,
-  exclude: ["/beta"], // For sitemap
+  exclude: ["/nodes/create"], // For sitemap
   async rewrites() {
     return [
       {
