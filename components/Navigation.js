@@ -79,7 +79,9 @@ export default function Navigation() {
                     checked={daytime}
                     onChange={() => setDaytime(!daytime)}
                   />
-                  <span className={"slider"} />
+                  <span
+                    className={`slider ${daytime ? undefined : "nighttime"}`}
+                  />
                 </label>
                 <a
                   className={daytime ? undefined : "nighttime-link"}

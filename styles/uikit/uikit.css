@@ -11750,6 +11750,9 @@ a:hover {
   transition: var(--transition);
   border-radius: 44px;
 }
+.slider.nighttime {
+  background-color: #9be4b1;
+}
 .slider:before {
   position: absolute;
   content: "";
