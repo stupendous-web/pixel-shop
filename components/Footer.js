@@ -29,7 +29,14 @@ export default function Footer() {
             <span style={{ transition: "var(--transition)" }}>
               &copy; Copyright
             </span>{" "}
-            <a href={"/"} title={"The Pixel Shop"}>
+            <a
+              href={"/"}
+              title={"The Pixel Shop"}
+              style={{
+                color: daytime ? undefined : "#ffffff",
+                transition: "var(--transition)",
+              }}
+            >
               The Pixel Shop
             </a>{" "}
             <span style={{ transition: "var(--transition)" }}>
@@ -38,16 +45,30 @@ export default function Footer() {
             <a
               href={"https://twitter.com/realpixelshop"}
               title={"The Pixel Shop"}
+              style={{
+                color: daytime ? undefined : "#ffffff",
+                transition: "var(--transition)",
+              }}
             >
               <FontAwesomeIcon icon={faTwitter} />
             </a>{" "}
             <a
               href={"https://discord.gg/thepixelshop"}
               title={"The Pixel Shop"}
+              style={{
+                color: daytime ? undefined : "#ffffff",
+                transition: "var(--transition)",
+              }}
             >
               <FontAwesomeIcon icon={faDiscord} />
             </a>{" "}
-            <a href={"mailto:contact@thepixelshop.app"}>
+            <a
+              href={"mailto:contact@thepixelshop.app"}
+              style={{
+                color: daytime ? undefined : "#ffffff",
+                transition: "var(--transition)",
+              }}
+            >
               contact@thepixelshop.app
             </a>
           </div>
