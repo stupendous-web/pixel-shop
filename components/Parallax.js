@@ -9,10 +9,6 @@ const images = [
     "/images/parallax/nighttime/8-clouds.png",
   ],
   [
-    "/images/parallax/daytime/7-bakcground.png",
-    "/images/parallax/nighttime/7-background.png",
-  ],
-  [
     "/images/parallax/daytime/6-middleground.png",
     "/images/parallax/nighttime/6-middleground.png",
   ],
